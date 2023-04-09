@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { AppBar, Toolbar, IconButton, Stack, Box, Container, Typography, Button, Drawer, Divider, List, ListItem, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
-import { Menu, Close, LinkedIn, GitHub, YouTube, Fullscreen } from '@mui/icons-material'
+import { Menu, Close, LinkedIn, GitHub, YouTube } from '@mui/icons-material'
 
 const drawerWidth = 240
 
@@ -90,7 +90,7 @@ const Header = (props) => {
                             </Stack>
                         </Toolbar>
                     </AppBar>
-                    <Toolbar />
+                    <Toolbar/>
                     <Container position='relative' maxWidth={false} disableGutters display='flex'>
                         {socials}
                     </Container>
