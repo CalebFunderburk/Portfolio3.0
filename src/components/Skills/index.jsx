@@ -7,11 +7,11 @@ const Skills = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box sx={{ backgroundColor: '#4caf50', height: '94vh' }}>
+                <Box id='skills' sx={{ backgroundColor: '#4caf50', height: '95.5vh' }}>
                     <Typography>Skills Section</Typography>
                 </Box>
                 :
-                <Box sx={{ backgroundColor: '#4caf50', height: '95vh' }}>
+                <Box id='skills' sx={{ backgroundColor: '#4caf50', height: '95vh' }}>
                     <Typography>Skills Section</Typography>
                 </Box>
             }

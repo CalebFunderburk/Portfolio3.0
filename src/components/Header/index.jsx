@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { Link } from 'react-scroll'
 import { AppBar, Toolbar, IconButton, Stack, Box, Container, Typography, Button, Drawer, Divider, List, ListItem, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
-import { Menu, Close, LinkedIn, GitHub, YouTube } from '@mui/icons-material'
+import { Menu, Close, LinkedIn, GitHub, YouTube, MusicNote } from '@mui/icons-material'
 
 const drawerWidth = 240
 
@@ -44,19 +45,27 @@ const Header = (props) => {
         <List>
             <Divider />
             <ListItem alignItems='center'>
-                <Button aria-label='Skills' color='inherit' onClick={close}>Skills</Button>
+                <Link to='skills' spy={true} smooth={true} offset={-56} duration={500}> 
+                    <Button aria-label='Skills' color='inherit' onClick={close}>Skills</Button>
+                </Link>
             </ListItem>
             <Divider />
             <ListItem>
-                <Button aria-label='Projects' color='inherit' onClick={close}>Projects</Button>
+                <Link to='projects' spy={true} smooth={true} offset={-56} duration={500}>
+                    <Button aria-label='Projects' color='inherit' onClick={close}>Projects</Button>
+                </Link>
             </ListItem>
             <Divider />
             <ListItem>
-                <Button aria-label='Resume' color='inherit' onClick={close}>Resume</Button>
+                <Link to='resume' spy={true} smooth={true} offset={-56} duration={500}>
+                    <Button aria-label='Resume' color='inherit' onClick={close}>Resume</Button>
+                </Link>
             </ListItem>
             <Divider />
             <ListItem>
-                <Button aria-label='Contact' color='inherit' onClick={close}>Contact</Button>
+                <Link to='contact' spy={true} smooth={true} offset={-56} duration={500}>
+                    <Button aria-label='Contact' color='inherit' onClick={close}>Contact</Button>
+                </Link>
             </ListItem>
             <Divider />
             <Stack direction='row' justifyContent='space-around'>
@@ -81,16 +90,29 @@ const Header = (props) => {
                 <>
                     <AppBar position='fixed' sx={{ zIndex: 1201 }}>
                         <Toolbar>
+                            <Link to='hero' spy={true} smooth={true} offset={-64} duration={500}>
+                                <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
+                                    <MusicNote />
+                                </IconButton>
+                            </Link>
                             <Typography sx={{ flexGrow: 1 }}>Caleb Funderburk</Typography>
                             <Stack direction='row' spacing={{ sm: 1, md: 4 }}>
-                                <Button aria-label='Skills' color='inherit'>Skills</Button>
-                                <Button aria-label='Projects' color='inherit'>Projects</Button>
-                                <Button aria-label='Resume' color='inherit'>Resume</Button>
-                                <Button aria-label='Contact' color='inherit'>Contact</Button>
+                                <Link to='skills' spy={true} smooth={true} offset={-64} duration={500}>
+                                    <Button aria-label='Skills' color='inherit'>Skills</Button>
+                                </Link>
+                                <Link to='projects' spy={true} smooth={true} offset={-64} duration={500}>
+                                    <Button aria-label='Projects' color='inherit'>Projects</Button>
+                                </Link>
+                                <Link to='resume' spy={true} smooth={true} offset={-64} duration={500}>
+                                    <Button aria-label='Resume' color='inherit'>Resume</Button>
+                                </Link>
+                                <Link to='contact' spy={true} smooth={true} offset={-64} duration={500}>
+                                    <Button aria-label='Contact' color='inherit'>Contact</Button>
+                                </Link>
                             </Stack>
                         </Toolbar>
                     </AppBar>
-                    <Toolbar/>
+                    <Toolbar />
                     <Container position='relative' maxWidth={false} disableGutters display='flex'>
                         {socials}
                     </Container>
@@ -99,6 +121,12 @@ const Header = (props) => {
                 <>
                     <AppBar position='fixed' sx={{ zIndex: 1201 }}>
                         <Toolbar>
+                            {/* Check why this isn't working */}
+                            <Link to='hero' spy={true} smooth={true} offset={-56} duration={500}>
+                                <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
+                                    <MusicNote />
+                                </IconButton>
+                            </Link>
                             <Typography align='center' sx={{ flexGrow: 1 }}>Caleb Funderburk</Typography>
                             <Stack direction='row' spacing={{ xs: 1, sm: 2, md: 3 }}>
                                 {!open ?

@@ -1,4 +1,4 @@
-import { Container, Typography, Box, useMediaQuery } from '@mui/material'
+import { Typography, Box, useMediaQuery } from '@mui/material'
 
 const Hero = () => {
 
@@ -7,11 +7,11 @@ const Hero = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box sx={{ backgroundColor: '#ff9800', height: '94vh' }}>
+                <Box id='hero' sx={{ backgroundColor: '#ff9800', height: '95.5vh' }}>
                     <Typography>Hero Section</Typography>
                 </Box>
                 :
-                <Box sx={{ backgroundColor: '#ff9800', height: '95vh' }}>
+                <Box id='hero' sx={{ backgroundColor: '#ff9800', height: '95vh' }}>
                     <Typography>Hero Section</Typography>
                 </Box>
             }

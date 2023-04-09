@@ -7,11 +7,11 @@ const Contact = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box sx={{ backgroundColor: '#ffeb3b', height: '94vh' }}>
+                <Box id='contact' sx={{ backgroundColor: '#ffeb3b', height: '95.5vh' }}>
                     <Typography>Contact Section</Typography>
                 </Box>
                 :
-                <Box sx={{ backgroundColor: '#ffeb3b', height: '95vh' }}>
+                <Box id='contact' sx={{ backgroundColor: '#ffeb3b', height: '95vh' }}>
                     <Typography>Contact Section</Typography>
                 </Box>
             }

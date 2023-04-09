@@ -7,11 +7,11 @@ const Resume = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box sx={{ backgroundColor: '#673ab7', height: '94vh' }}>
+                <Box id='resume' sx={{ backgroundColor: '#673ab7', height: '95.5vh' }}>
                     <Typography>Resume Section</Typography>
                 </Box>
                 :
-                <Box sx={{ backgroundColor: '#673ab7', height: '95vh' }}>
+                <Box id='resume' sx={{ backgroundColor: '#673ab7', height: '95vh' }}>
                     <Typography>Resume Section</Typography>
                 </Box>
             }
