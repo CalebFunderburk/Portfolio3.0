@@ -1,11 +1,13 @@
-import { Container, Typography } from "@mui/material"
+import { Container, Typography,} from '@mui/material'
 
 const Hero = () => {
 
     return (
-        <Container>
-            <Typography>Caleb Funderburk</Typography>
-        </Container>
+        <>
+            <Container>
+                <Typography>Caleb Funderburk</Typography>
+            </Container>
+        </>
     )
 
 }

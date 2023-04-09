@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { AppBar, Toolbar, IconButton, Stack, Typography, Button, Drawer, Divider, List, ListItem, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
-import { Menu, Close, LinkedIn, GitHub, YouTube } from '@mui/icons-material'
+import { AppBar, Toolbar, IconButton, Stack, Box, Container, Typography, Button, Drawer, Divider, List, ListItem, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
+import { Menu, Close, LinkedIn, GitHub, YouTube, Fullscreen } from '@mui/icons-material'
 
 const drawerWidth = 240
 
@@ -8,7 +8,7 @@ const Header = (props) => {
 
     const [open, setOpen] = useState(false)
 
-    const mobileResponse = useMediaQuery('(max-width:600px)')
+    const mobileViewport = useMediaQuery('(max-width:600px)')
 
     const { window } = props
 
@@ -19,30 +19,30 @@ const Header = (props) => {
     const drawer = (
         <List>
             <Divider />
-            <ListItem>
-                <Button color='inherit' onClick={close}>Skills</Button>
+            <ListItem alignItems='center'>
+                <Button aria-label='Skills' color='inherit' onClick={close}>Skills</Button>
             </ListItem>
             <Divider />
             <ListItem>
-                <Button color='inherit' onClick={close}>Projects</Button>
+                <Button aria-label='Projects' color='inherit' onClick={close}>Projects</Button>
             </ListItem>
             <Divider />
             <ListItem>
-                <Button color='inherit' onClick={close}>Resume</Button>
+                <Button aria-label='Resume' color='inherit' onClick={close}>Resume</Button>
             </ListItem>
             <Divider />
             <ListItem>
-                <Button color='inherit' onClick={close}>Contact</Button>
+                <Button aria-label='Contact' color='inherit' onClick={close}>Contact</Button>
             </ListItem>
             <Divider />
             <Stack direction='row' justifyContent='space-around'>
-                <IconButton>
+                <IconButton aria-label='LinkedIn'>
                     <LinkedIn fontSize='large' />
                 </IconButton>
-                <IconButton>
+                <IconButton aria-label='GitHub'>
                     <GitHub fontSize='large' />
                 </IconButton>
-                <IconButton>
+                <IconButton aria-label='YouTube'>
                     <YouTube fontSize='large' />
                 </IconButton>
             </Stack>
@@ -53,45 +53,89 @@ const Header = (props) => {
 
     return (
         <>
-            {!mobileResponse ?
+            {!mobileViewport ?
                 <>
                     <AppBar position='fixed' sx={{ zIndex: 1201 }}>
                         <Toolbar>
                             <Typography sx={{ flexGrow: 1 }}>Caleb Funderburk</Typography>
                             <Stack direction='row' spacing={{ sm: 1, md: 4 }}>
-                                <Button color='inherit'>Skills</Button>
-                                <Button color='inherit'>Projects</Button>
-                                <Button color='inherit'>Resume</Button>
-                                <Button color='inherit'>Contact</Button>
+                                <Button aria-label='Skills' color='inherit'>Skills</Button>
+                                <Button aria-label='Projects' color='inherit'>Projects</Button>
+                                <Button aria-label='Resume' color='inherit'>Resume</Button>
+                                <Button aria-label='Contact' color='inherit'>Contact</Button>
                             </Stack>
                         </Toolbar>
-                        <Toolbar variant='dense'>
+                        {/* <Toolbar variant='dense'>
+                            <Stack sx={{ flexGrow: 40 }}></Stack>
                             <Stack sx={{ flexGrow: 2 }} direction='row' spacing={5} justifyContent='flex-end'>
-                                <IconButton>
+                                <IconButton aria-label='LinkedIn'>
                                     <LinkedIn fontSize='large' />
                                 </IconButton>
-                                <IconButton>
+                                <IconButton aria-label='GitHub'>
                                     <GitHub fontSize='large' />
                                 </IconButton>
-                                <IconButton>
+                                <IconButton aria-label='YouTube'>
                                     <YouTube fontSize='large' />
                                 </IconButton>
                             </Stack>
-                        </Toolbar>
+                        </Toolbar> */}
+                        {/* <Box alignSelf='end' sx={{
+                            width: 330,
+                            height: 75,
+                            flexGrow: 1,
+                            borderBottomLeftRadius: 100,
+                            backgroundColor: '#aa00ff'
+                        }}>
+                            <Stack sx={{ flexGrow: 2 }} direction='row' spacing={5} py={1.5} pr={3} justifyContent='flex-end'>
+                                <IconButton aria-label='LinkedIn'>
+                                    <LinkedIn fontSize='large' />
+                                </IconButton>
+                                <IconButton aria-label='GitHub'>
+                                    <GitHub fontSize='large' />
+                                </IconButton>
+                                <IconButton aria-label='YouTube'>
+                                    <YouTube fontSize='large' />
+                                </IconButton>
+                            </Stack>
+                        </Box> */}
                     </AppBar>
+                    <Toolbar/>
+                    <Container position='relative' maxWidth={false} disableGutters display='flex'>
+                        <Box PaperProps={{ elevation: 6 }} sx={{
+                                width: 330,
+                                height: 75,
+                                borderBottomLeftRadius: 100,
+                                backgroundColor: '#1976d2',
+                                position: 'absolute',
+                                right: '0',
+                                zIndex: 1201
+                            }}>
+                                <Stack sx={{ flexGrow: 2 }} direction='row' spacing={5} py={1.5} pr={3} justifyContent='flex-end'>
+                                    <IconButton aria-label='LinkedIn'>
+                                        <LinkedIn fontSize='large' />
+                                    </IconButton>
+                                    <IconButton aria-label='GitHub'>
+                                        <GitHub fontSize='large' />
+                                    </IconButton>
+                                    <IconButton aria-label='YouTube'>
+                                        <YouTube fontSize='large' />
+                                    </IconButton>
+                                </Stack>
+                            </Box>
+                    </Container>
                 </>
-                :
+            :
                 <>
                     <AppBar position='fixed' sx={{ zIndex: 1201 }}>
                         <Toolbar>
-                            <Typography sx={{ flexGrow: 1 }}>Caleb Funderburk</Typography>
+                            <Typography align='center' sx={{ flexGrow: 1 }}>Caleb Funderburk</Typography>
                             <Stack direction='row' spacing={{ xs: 1, sm: 2, md: 3 }}>
                                 {!open ?
-                                    <IconButton onClick={setOpen}>
+                                    <IconButton aria-label='Menu' onClick={setOpen}>
                                         <Menu color='inherit' />
                                     </IconButton>
-                                    :
-                                    <IconButton onClick={close}>
+                                :
+                                    <IconButton aria-label='Close' onClick={close}>
                                         <Close color='inherit' />
                                     </IconButton>
                                 }

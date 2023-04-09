@@ -8,6 +8,7 @@ function App() {
     <>
       <Header/>
       <Toolbar/>
+      <Toolbar/>
       <main>
         <Hero/>
       </main>
