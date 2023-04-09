@@ -22,7 +22,7 @@ const Header = (props) => {
             height: 75,
             borderBottomLeftRadius: 100,
             backgroundColor: '#1976d2',
-            position: 'absolute',
+            position: 'fixed',
             right: '0',
             zIndex: 1201
         }}>
