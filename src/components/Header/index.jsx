@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
-import { AppBar, Toolbar, IconButton, Stack, Box, Container, Typography, Button, Drawer, Divider, List, ListItem, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
+import { AppBar, Toolbar, IconButton, Stack, Box, Container, Typography, Button, Drawer, Divider, List, ListItem, Link as ExternalLink, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
 import { Menu, Close, LinkedIn, GitHub, YouTube, MusicNote } from '@mui/icons-material'
-
-const drawerWidth = 240
 
 const Header = (props) => {
 
     const [open, setOpen] = useState(false)
 
     const mobileViewport = useMediaQuery('(max-width:600px)')
+
+    const drawerWidth = 240
 
     const { window } = props
 
@@ -28,15 +28,21 @@ const Header = (props) => {
             zIndex: 1201
         }}>
             <Stack sx={{ flexGrow: 2 }} direction='row' spacing={5} py={1.5} pr={3} justifyContent='flex-end'>
-                <IconButton aria-label='LinkedIn'>
-                    <LinkedIn fontSize='large' />
-                </IconButton>
-                <IconButton aria-label='GitHub'>
-                    <GitHub fontSize='large' />
-                </IconButton>
-                <IconButton aria-label='YouTube'>
-                    <YouTube fontSize='large' />
-                </IconButton>
+                <ExternalLink href='https://www.linkedin.com/in/caleb-funderburk/' target='_blank'>
+                    <IconButton aria-label='LinkedIn'>
+                        <LinkedIn fontSize='large' />
+                    </IconButton>
+                </ExternalLink>
+                <ExternalLink href='https://github.com/CalebFunderburk' target='_blank'>
+                    <IconButton aria-label='GitHub'>
+                        <GitHub fontSize='large' />
+                    </IconButton>
+                </ExternalLink>
+                <ExternalLink href='https://www.youtube.com/@calebfunderburk9355' target='_blank'>
+                    <IconButton aria-label='YouTube'>
+                        <YouTube fontSize='large' />
+                    </IconButton>
+                </ExternalLink>
             </Stack>
         </Box>
     )
@@ -45,7 +51,7 @@ const Header = (props) => {
         <List>
             <Divider />
             <ListItem alignItems='center'>
-                <Link to='skills' spy={true} smooth={true} offset={-56} duration={500}> 
+                <Link to='skills' spy={true} smooth={true} offset={-56} duration={500}>
                     <Button aria-label='Skills' color='inherit' onClick={close}>Skills</Button>
                 </Link>
             </ListItem>
@@ -69,15 +75,21 @@ const Header = (props) => {
             </ListItem>
             <Divider />
             <Stack direction='row' justifyContent='space-around'>
-                <IconButton aria-label='LinkedIn'>
-                    <LinkedIn fontSize='large' />
-                </IconButton>
-                <IconButton aria-label='GitHub'>
-                    <GitHub fontSize='large' />
-                </IconButton>
-                <IconButton aria-label='YouTube'>
-                    <YouTube fontSize='large' />
-                </IconButton>
+                <ExternalLink href='https://www.linkedin.com/in/caleb-funderburk/' target='_blank'>
+                    <IconButton aria-label='LinkedIn'>
+                        <LinkedIn fontSize='large' />
+                    </IconButton>
+                </ExternalLink>
+                <ExternalLink href='https://github.com/CalebFunderburk' target='_blank'>
+                    <IconButton aria-label='GitHub'>
+                        <GitHub fontSize='large' />
+                    </IconButton>
+                </ExternalLink>
+                <ExternalLink href='https://www.youtube.com/@calebfunderburk9355' target='_blank'>
+                    <IconButton aria-label='YouTube'>
+                        <YouTube fontSize='large' />
+                    </IconButton>
+                </ExternalLink>
             </Stack>
         </List>
     )

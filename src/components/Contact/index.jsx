@@ -11,7 +11,7 @@ const Contact = () => {
                     <Typography>Contact Section</Typography>
                 </Box>
                 :
-                <Box id='contact' sx={{ backgroundColor: '#ffeb3b', height: '95vh' }}>
+                <Box id='contact' sx={{ backgroundColor: '#ffeb3b', height: '96vh' }}>
                     <Typography>Contact Section</Typography>
                 </Box>
             }
