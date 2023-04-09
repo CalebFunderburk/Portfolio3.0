@@ -16,6 +16,30 @@ const Header = (props) => {
         setOpen(!open)
     }
 
+    const socials = (
+        <Box sx={{
+            width: 330,
+            height: 75,
+            borderBottomLeftRadius: 100,
+            backgroundColor: '#1976d2',
+            position: 'absolute',
+            right: '0',
+            zIndex: 1201
+        }}>
+            <Stack sx={{ flexGrow: 2 }} direction='row' spacing={5} py={1.5} pr={3} justifyContent='flex-end'>
+                <IconButton aria-label='LinkedIn'>
+                    <LinkedIn fontSize='large' />
+                </IconButton>
+                <IconButton aria-label='GitHub'>
+                    <GitHub fontSize='large' />
+                </IconButton>
+                <IconButton aria-label='YouTube'>
+                    <YouTube fontSize='large' />
+                </IconButton>
+            </Stack>
+        </Box>
+    )
+
     const drawer = (
         <List>
             <Divider />
@@ -65,66 +89,13 @@ const Header = (props) => {
                                 <Button aria-label='Contact' color='inherit'>Contact</Button>
                             </Stack>
                         </Toolbar>
-                        {/* <Toolbar variant='dense'>
-                            <Stack sx={{ flexGrow: 40 }}></Stack>
-                            <Stack sx={{ flexGrow: 2 }} direction='row' spacing={5} justifyContent='flex-end'>
-                                <IconButton aria-label='LinkedIn'>
-                                    <LinkedIn fontSize='large' />
-                                </IconButton>
-                                <IconButton aria-label='GitHub'>
-                                    <GitHub fontSize='large' />
-                                </IconButton>
-                                <IconButton aria-label='YouTube'>
-                                    <YouTube fontSize='large' />
-                                </IconButton>
-                            </Stack>
-                        </Toolbar> */}
-                        {/* <Box alignSelf='end' sx={{
-                            width: 330,
-                            height: 75,
-                            flexGrow: 1,
-                            borderBottomLeftRadius: 100,
-                            backgroundColor: '#aa00ff'
-                        }}>
-                            <Stack sx={{ flexGrow: 2 }} direction='row' spacing={5} py={1.5} pr={3} justifyContent='flex-end'>
-                                <IconButton aria-label='LinkedIn'>
-                                    <LinkedIn fontSize='large' />
-                                </IconButton>
-                                <IconButton aria-label='GitHub'>
-                                    <GitHub fontSize='large' />
-                                </IconButton>
-                                <IconButton aria-label='YouTube'>
-                                    <YouTube fontSize='large' />
-                                </IconButton>
-                            </Stack>
-                        </Box> */}
                     </AppBar>
-                    <Toolbar/>
+                    <Toolbar />
                     <Container position='relative' maxWidth={false} disableGutters display='flex'>
-                        <Box PaperProps={{ elevation: 6 }} sx={{
-                                width: 330,
-                                height: 75,
-                                borderBottomLeftRadius: 100,
-                                backgroundColor: '#1976d2',
-                                position: 'absolute',
-                                right: '0',
-                                zIndex: 1201
-                            }}>
-                                <Stack sx={{ flexGrow: 2 }} direction='row' spacing={5} py={1.5} pr={3} justifyContent='flex-end'>
-                                    <IconButton aria-label='LinkedIn'>
-                                        <LinkedIn fontSize='large' />
-                                    </IconButton>
-                                    <IconButton aria-label='GitHub'>
-                                        <GitHub fontSize='large' />
-                                    </IconButton>
-                                    <IconButton aria-label='YouTube'>
-                                        <YouTube fontSize='large' />
-                                    </IconButton>
-                                </Stack>
-                            </Box>
+                        {socials}
                     </Container>
                 </>
-            :
+                :
                 <>
                     <AppBar position='fixed' sx={{ zIndex: 1201 }}>
                         <Toolbar>
@@ -134,7 +105,7 @@ const Header = (props) => {
                                     <IconButton aria-label='Menu' onClick={setOpen}>
                                         <Menu color='inherit' />
                                     </IconButton>
-                                :
+                                    :
                                     <IconButton aria-label='Close' onClick={close}>
                                         <Close color='inherit' />
                                     </IconButton>
