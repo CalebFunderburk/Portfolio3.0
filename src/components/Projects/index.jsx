@@ -1,28 +1,21 @@
-import { Typography, Box, Grid, Card, Stack, useMediaQuery } from '@mui/material'
+import { Typography, Box, Grid, Card, useMediaQuery } from '@mui/material'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
-const Projects = (props) => {
+const Projects = () => {
 
-    const mobileViewport = useMediaQuery('(max-width:800px)')
+    const mobileViewport = useMediaQuery('(max-width:900px)')
 
     const responsive = {
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-            slidesToSlide: 3 // optional, default to 1.
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2,
-            slidesToSlide: 2 // optional, default to 1.
-        },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 900, min: 0 },
             items: 1,
-            slidesToSlide: 1 // optional, default to 1.
+            partialVisibilityGutter: 30
         }
     }
+
+    // Notes:
+    // Really like the Carousel on the mobile viewport, maybe include it in desktop version? 
 
     return (
         <>
@@ -45,17 +38,17 @@ const Projects = (props) => {
                 </Box>
                 :
                 <Box id='projects' sx={{ backgroundColor: '#f44336', height: '95vh' }}>
-                    <Carousel responsive={responsive}>
-                        <Card elevation={9} sx={{ minHeight: '40vh', minWidth: '85%' }}>
+                    <Carousel responsive={responsive} partialVisible={true}>
+                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx:1 }}>
                             <Typography>1</Typography>
                         </Card>
-                        <Card elevation={9} sx={{ minHeight: '40vh', minWidth: '85%' }}>
+                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx:1  }}>
                             <Typography>2</Typography>
                         </Card>
-                        <Card elevation={9} sx={{ minHeight: '40vh', minWidth: '85%' }}>
+                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx:1  }}>
                             <Typography>3</Typography>
                         </Card>
-                        <Card elevation={9} sx={{ minHeight: '40vh', minWidth: '85%' }}>
+                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx:1  }}>
                             <Typography>4</Typography>
                         </Card>
                     </Carousel>
