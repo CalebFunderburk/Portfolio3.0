@@ -4,18 +4,18 @@ import 'react-multi-carousel/lib/styles.css'
 
 const Projects = () => {
 
-    const mobileViewport = useMediaQuery('(max-width:900px)')
+    const mobileViewport = useMediaQuery('(max-width:1100px)')
 
     const responsive = {
         mobile: {
-            breakpoint: { max: 900, min: 0 },
-            items: 1,
-            partialVisibilityGutter: 30
+            breakpoint: { max: 1100, min: 0 },
+            items: 1
         }
     }
 
     // Notes:
-    // Really like the Carousel on the mobile viewport, maybe include it in desktop version? 
+    // Really like the Carousel on the mobile viewport, maybe include it in desktop version?
+
 
     return (
         <>
@@ -37,8 +37,8 @@ const Projects = () => {
                     </Grid>
                 </Box>
                 :
-                <Box id='projects' sx={{ backgroundColor: '#f44336', height: '95vh' }}>
-                    <Carousel responsive={responsive} partialVisible={true}>
+                <Box id='projects' py='30vh' sx={{ backgroundColor: '#f44336', height: '95vh' }}>
+                    <Carousel responsive={responsive}  infinite={true} centerMode={true}>
                         <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx:1 }}>
                             <Typography>1</Typography>
                         </Card>
