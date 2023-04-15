@@ -103,8 +103,8 @@ const Header = (props) => {
                     <AppBar position='fixed' sx={{ zIndex: 1201 }}>
                         <Toolbar>
                             <Link to='hero' spy={true} smooth={true} offset={-64} duration={500}>
-                                <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
-                                    <Home />
+                                <IconButton size='large' edge='start' color='inherit' aria-label='home'>
+                                    <Home/>
                                 </IconButton>
                             </Link>
                             <Typography sx={{ flexGrow: 1 }}>Caleb Funderburk</Typography>
@@ -135,8 +135,8 @@ const Header = (props) => {
                         <Toolbar>
                             {/* Check why this isn't working */}
                             <Link to='hero' spy={true} smooth={true} offset={-56} duration={500}>
-                                <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
-                                    <MusicNote />
+                                <IconButton size='large' edge='start' color='inherit' aria-label='home'>
+                                    <Home/>
                                 </IconButton>
                             </Link>
                             <Typography align='center' sx={{ flexGrow: 1 }}>Caleb Funderburk</Typography>
