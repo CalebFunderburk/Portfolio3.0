@@ -20,8 +20,8 @@ const Projects = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box id='projects' sx={{ backgroundColor: '#f44336', height: '95.5vh' }}>
-                    <Grid container justifyContent='center' rowGap={2} columnSpacing={2} sx={{ py: '5%' }}>
+                <Box id='projects' py='10vh' sx={{ backgroundColor: '#f44336', height: '95.5vh' }}>
+                    <Grid container justifyContent='center' rowGap={2} columnSpacing={2}>
                         <Grid item xs={5}>
                             <Card sx={{ minHeight: '40vh' }}>1</Card>
                         </Grid>
@@ -37,18 +37,18 @@ const Projects = () => {
                     </Grid>
                 </Box>
                 :
-                <Box id='projects' py='30vh' sx={{ backgroundColor: '#f44336', height: '95vh' }}>
-                    <Carousel responsive={responsive}  infinite={true} centerMode={true}>
-                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx:1 }}>
+                <Box id='projects' py='25vh' sx={{ backgroundColor: '#f44336', height: '95vh' }}>
+                    <Carousel responsive={responsive} infinite={true} centerMode={true}>
+                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx: 2 }}>
                             <Typography>1</Typography>
                         </Card>
-                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx:1  }}>
+                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx: 2  }}>
                             <Typography>2</Typography>
                         </Card>
-                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx:1  }}>
+                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx: 2  }}>
                             <Typography>3</Typography>
                         </Card>
-                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx:1  }}>
+                        <Card elevation={9} sx={{ minHeight: '50vh', minWidth: '60%', mx: 2  }}>
                             <Typography>4</Typography>
                         </Card>
                     </Carousel>
