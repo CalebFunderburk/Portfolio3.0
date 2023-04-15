@@ -7,16 +7,15 @@ const Resume = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box id='resume' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#673ab7', height: '95.5vh' }}>
+                <Box id='resume' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Card elevation={9} sx={{ minWidth: '85%', minHeight:'50vh' }}>
                         <Typography>View or download my resume here!</Typography>
                     </Card>
                 </Box>
                 :
-                <Box id='resume' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#673ab7', height: '95vh' }}>
+                <Box id='resume' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
                     <Card elevation={9} sx={{ minWidth: '85%', minHeight:'50vh' }}>
-                        <Typography>Welcome, I'm Caleb.</Typography>
-                        <Typography>I'm a full stack developer.</Typography>
+                        <Typography>View or download my resume here!</Typography>
                     </Card>
                 </Box>
             }

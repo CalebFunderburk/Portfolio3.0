@@ -17,6 +17,9 @@ const Header = (props) => {
         setOpen(!open)
     }
 
+    // Notes:
+    // Need to add selector for Dark Mode to navbar
+
     const socials = (
         <Box sx={{
             width: 330,

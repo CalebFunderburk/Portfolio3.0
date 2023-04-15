@@ -12,7 +12,7 @@ const Contact = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box id='contact' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#ffeb3b', height: '95.5vh' }}>
+                <Box id='contact' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Card elevation={9} sx={{ minWidth: '85%', minHeight:'50vh' }}>
                         <Typography variant='h3' align='center'>Contact</Typography>
                         <Grid align='center'>
@@ -26,7 +26,7 @@ const Contact = () => {
                     </Card>
                 </Box>
                 :
-                <Box id='contact' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#ffeb3b', height: '95.5vh' }}>
+                <Box id='contact' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Card elevation={9} sx={{ minWidth: '85%', minHeight:'50vh' }}>
                         <Typography variant='h3' align='center'>Contact</Typography>
                         <Grid align='center'>
