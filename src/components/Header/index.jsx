@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 import { AppBar, Toolbar, IconButton, Stack, Box, Container, Typography, Button, Drawer, Divider, List, ListItem, Link as ExternalLink, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
-import { Menu, Close, LinkedIn, GitHub, YouTube, MusicNote } from '@mui/icons-material'
+import { Menu, Close, LinkedIn, GitHub, YouTube, Home } from '@mui/icons-material'
 
 const Header = (props) => {
 
@@ -104,7 +104,7 @@ const Header = (props) => {
                         <Toolbar>
                             <Link to='hero' spy={true} smooth={true} offset={-64} duration={500}>
                                 <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
-                                    <MusicNote />
+                                    <Home />
                                 </IconButton>
                             </Link>
                             <Typography sx={{ flexGrow: 1 }}>Caleb Funderburk</Typography>
