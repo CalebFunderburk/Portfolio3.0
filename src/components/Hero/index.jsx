@@ -1,9 +1,9 @@
 import { Link } from 'react-scroll'
-import { Typography, Box, Card, Grid, ButtonGroup, Button, useMediaQuery } from '@mui/material'
+import { Typography, Box, Grid, Button, useMediaQuery } from '@mui/material'
 
 const Hero = () => {
 
-    const mobileViewport = useMediaQuery('(max-width:600px)')
+    const mobileViewport = useMediaQuery('(max-width:850px)')
 
     return (
         <>
@@ -22,14 +22,14 @@ const Hero = () => {
                 </Box>
                 :
                 <Box id='hero' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
-                    <Grid sx={{ minWidth: '50%', minHeight:'50vh' }}>
+                    <Grid sx={{ minWidth: '50%', minHeight:'50vh', mx: 2 }}>
                         <Typography variant='h3'>Welcome, I'm <Typography variant='h' color='#1976d2'>Caleb</Typography>.</Typography>
                         <Typography variant='h3'>I'm a full stack developer.</Typography>
                         <Link to='projects' spy={true} smooth={true} offset={-56} duration={500}>
-                            <Button variant='contained' sx={{ my: 3 }}>View my work</Button>
+                            <Button variant='contained' size='small' sx={{ my: 3 }}>View my work</Button>
                         </Link>
                         <Link to='contact' spy={true} smooth={true} offset={-56} duration={500}>
-                            <Button variant='contained' sx={{ my: 3}}>Contact me</Button>
+                            <Button variant='contained' size='small' sx={{ my: 3}}>Contact me</Button>
                         </Link>
                     </Grid>
                 </Box>
