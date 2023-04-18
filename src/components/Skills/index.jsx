@@ -8,7 +8,7 @@ const Skills = () => {
 
     const responsive = {
         mobile: {
-            breakpoint: { max: 1100, min: 0 },
+            breakpoint: { max: 950, min: 0 },
             items: 1
         }
     }
@@ -22,8 +22,8 @@ const Skills = () => {
             {!mobileViewport ?
                 <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Typography variant='h2' align='center' pt='5%'>Skills</Typography>
-                    <Grid display='flex' justifyContent='center' alignItems='center' mt='10%' >
-                        <Card container elevation={9} sx={{ minHeight: '45vh', minWidth: '30%', mx: '1%' }}>
+                    <Grid display='flex' justifyContent='center' alignItems='center' mt='5%' >
+                        <Card container elevation={9} sx={{ minHeight: '58vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Front End'
                                 align='center'
@@ -58,7 +58,7 @@ const Skills = () => {
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Card container elevation={9} sx={{ minHeight: '45vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ minHeight: '58vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Back End'
                                 align='center'
@@ -103,7 +103,7 @@ const Skills = () => {
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Card container elevation={9} sx={{ minHeight: '45vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ minHeight: '58vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Tools'
                                 align='center'
@@ -149,7 +149,7 @@ const Skills = () => {
                 <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
                     <Typography variant='h2' align='center' py='10%'>Skills</Typography>
                     <Carousel responsive={responsive} infinite={true} centerMode={true}>
-                        <Card container elevation={9} sx={{ minHeight: '45vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ minHeight: '63vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Front End'
                                 align='center'
@@ -184,7 +184,7 @@ const Skills = () => {
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Card container elevation={9} sx={{ minHeight: '45vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ minHeight: '63vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Back End'
                                 align='center'
@@ -229,7 +229,7 @@ const Skills = () => {
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Card container elevation={9} sx={{ minHeight: '45vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ minHeight: '63vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Tools'
                                 align='center'
