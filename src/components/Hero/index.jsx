@@ -3,7 +3,7 @@ import { Typography, Box, Grid, Button, useMediaQuery } from '@mui/material'
 
 const Hero = () => {
 
-    const mobileViewport = useMediaQuery('(max-width:850px)')
+    const mobileViewport = useMediaQuery('(max-width:1100px)')
 
     return (
         <>

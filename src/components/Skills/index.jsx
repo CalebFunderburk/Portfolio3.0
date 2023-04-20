@@ -16,6 +16,7 @@ const Skills = () => {
     // Notes:
     // Currently using mt to keep skills boxes away from the top of the parent container
     // Currently mobile view makes icons too small initially, might need 3 break points
+    // Need to figure out why %'s wont work for card minHeight, would like to get rid of blank space
 
     return (
         <>
