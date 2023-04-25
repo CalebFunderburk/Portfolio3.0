@@ -22,7 +22,7 @@ const Skills = () => {
         <>
             {!mobileViewport ?
                 <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
-                    <Typography variant='h2' align='center' pt='5%'>Skills</Typography>
+                    <Typography variant='h2' align='center' pt='10%'>Skills</Typography>
                     <Grid display='flex' justifyContent='center' alignItems='center' mt='5%' >
                         <Card container elevation={9} sx={{ minHeight: '58vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader

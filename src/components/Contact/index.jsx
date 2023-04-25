@@ -8,6 +8,7 @@ const Contact = () => {
     // Notes:
     // Need to add value & onChange events to input fields, as well as a onSubmit function for the form.
     // Error & Success messages would look good as toast components
+    // Form is looking a little large on wide desktop views
 
     return (
         <>

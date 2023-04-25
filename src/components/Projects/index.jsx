@@ -56,6 +56,7 @@ const Projects = () => {
     // Notes:
     // Really like the Carousel on the mobile viewport, maybe include it in desktop version?
     // Projects look really scrunched together on mobile view, specifically 300px
+    // Would make code a lot cleaner if you used a for loop to display each project in the project array
 
 
     return (
