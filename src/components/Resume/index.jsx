@@ -59,9 +59,13 @@ const Resume = () => {
                     </Card>
                 </Box>
                 :
-                <Box id='resume' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
-                    <Card elevation={9} sx={{ minWidth: '85%', minHeight:'50vh' }}>
-                        <Typography>View or download my resume here!</Typography>
+                <Box id='resume' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                    <Typography variant='h2' align='center' pt='10%'>My Resume</Typography>
+                    <Card elevation={9} align='center' sx={{ minWidth: '85%', minHeight:'50vh', mx: '4%', mt: '10%', p: '15vh' }}>
+                        <Button variant='contained' size='large' endIcon={<Preview/>} onClick={handleOpen}>View in Browser</Button>
+                        {modal}
+                        <Typography variant='h5'>or</Typography>
+                        <a download href='src\assets\pdfs\Full Stack Development Resume.pdf'><Button variant='contained' size='large' endIcon={<Download/>}>Download</Button></a>
                     </Card>
                 </Box>
             }
