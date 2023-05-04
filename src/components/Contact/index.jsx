@@ -41,7 +41,7 @@ const Contact = () => {
             console.log('Submit Form', formState)
         }
 
-        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+        emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, import.meta.env.VITE_PUBLIC_KEY)
             .then((result) => {
                 console.log(result.text)
                 e.target.reset()
@@ -49,6 +49,8 @@ const Contact = () => {
                 console.log(error.text)
             })
     }
+
+    console.log(import.meta.env.VITE_PUBLIC_KEY)
 
     // Notes:
     // Need to add value & onChange events to input fields, as well as a onSubmit function for the form.
