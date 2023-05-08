@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
-import { Typography, Box, Grid, Card, TextField, Button, Alert, useMediaQuery } from '@mui/material'
-import { Send } from '@mui/icons-material'
+import { Typography, Box, Grid, Card, TextField, Button, Alert, Snackbar, IconButton, useMediaQuery } from '@mui/material'
+import { LoadingButton } from '@mui/lab'
+import { Send, Close } from '@mui/icons-material'
 import { validateEmail } from '../../utils/helpers'
 import emailjs from '@emailjs/browser'
 
@@ -10,6 +11,8 @@ const Contact = () => {
 
     const [formState, setFormState] = useState({ name: '', email: '', message: '' })
     const [errorMessage, setErrorMessage] = useState('')
+    const [openSuccess, setOpenSuccess] = useState(false)
+    const [openFailure, setOpenFailure] = useState(false)
     const form = useRef()
 
     const handleChange = (e) => {
@@ -45,17 +48,38 @@ const Contact = () => {
             .then((result) => {
                 console.log(result.text)
                 e.target.reset()
+                setOpenSuccess(true)
             }, (error) => {
                 console.log(error.text)
+                setOpenFailure(true)
             })
     }
 
-    console.log(import.meta.env.VITE_PUBLIC_KEY)
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return
+        }
+        setOpenSuccess(false)
+        setOpenFailure(false)
+    }
+
+    // const action = (
+    //     <>
+    //         <IconButton
+    //             size='small'
+    //             aria-label='close'
+    //             onClick={handleClose}
+    //         >
+    //             <Close fontSize='small' />
+    //         </IconButton>
+    //     </>
+    // )
 
     // Notes:
     // Need to add value & onChange events to input fields, as well as a onSubmit function for the form.
     // Error & Success messages would look good as toast components
     // Form is looking a little large on wide desktop views
+    // Can't figure out how to get icon button on alert snackbar, action is not working
 
     return (
         <>
@@ -74,7 +98,25 @@ const Contact = () => {
                                 <TextField id='email' variant='filled' sx={{ m: 1, width: '65%' }} label='Email' name='email' placeholder='Enter your email' type='email' margin='normal' fullWidth required onChange={handleChange} onBlur={handleChange} />
                                 <TextField id='message' variant='filled' sx={{ m: 1, width: '65%' }} label='Message' name='message' placeholder='Enter your message' type='text' margin='normal' fullWidth multiline rows={7} required onChange={handleChange} onBlur={handleChange} />
                                 <br />
-                                <Button type='submit' variant='contained' endIcon={<Send />} size='large' sx={{ width: '20%', my: '2%' }}>Send</Button>
+                                <LoadingButton type='submit' variant='contained' endIcon={<Send />} size='large' sx={{ width: '20%', my: '2%' }}>Send</LoadingButton>
+                                <Snackbar
+                                    open={openSuccess}
+                                    autoHideDuration={5000}
+                                    onClose={handleClose}
+                                >
+                                    <Alert severity='success' variant='filled' sx={{ width: '100%' }}>
+                                        Email sent successfully!
+                                    </Alert>
+                                </Snackbar>
+                                <Snackbar
+                                    open={openFailure}
+                                    autoHideDuration={5000}
+                                    onClose={handleClose}
+                                >
+                                    <Alert severity='error' variant='filled' sx={{ width: '100%' }}>
+                                        Something went wrong, please try again!
+                                    </Alert>
+                                </Snackbar>
                             </form>
                         </Grid>
                     </Card>
