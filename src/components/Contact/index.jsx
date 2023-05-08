@@ -80,6 +80,7 @@ const Contact = () => {
     // Error & Success messages would look good as toast components
     // Form is looking a little large on wide desktop views
     // Can't figure out how to get icon button on alert snackbar, action is not working
+    // Would like to implement loading status on send button, if not change LoadingButton back to regular button
 
     return (
         <>
@@ -103,6 +104,7 @@ const Contact = () => {
                                     open={openSuccess}
                                     autoHideDuration={5000}
                                     onClose={handleClose}
+                                    anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
                                 >
                                     <Alert severity='success' variant='filled' sx={{ width: '100%' }}>
                                         Email sent successfully!
@@ -112,6 +114,7 @@ const Contact = () => {
                                     open={openFailure}
                                     autoHideDuration={5000}
                                     onClose={handleClose}
+                                    anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
                                 >
                                     <Alert severity='error' variant='filled' sx={{ width: '100%' }}>
                                         Something went wrong, please try again!
@@ -126,12 +129,37 @@ const Contact = () => {
                     <Card elevation={9} sx={{ minWidth: '85%', minHeight: '40vh' }}>
                         <Typography variant='h3' align='center'>Contact</Typography>
                         <Grid align='center'>
-                            <form>
-                                <TextField id='name' variant='filled' sx={{ m: 1, width: '80%' }} label='Name' name='name' placeholder='Enter your name' type='text' margin='normal' fullWidth required />
-                                <TextField id='email' variant='filled' sx={{ m: 1, width: '80%' }} label='Email' name='email' placeholder='Enter your email' type='email' margin='normal' fullWidth required />
-                                <TextField id='message' variant='filled' sx={{ m: 1, width: '80%' }} label='Message' name='message' placeholder='Enter your message' type='text' margin='normal' fullWidth multiline rows={7} required />
+                            {errorMessage ?
+                                <Alert severity='error' variant='filled' sx={{ mx: '17%' }}>{errorMessage}</Alert>
+                                :
+                                null
+                            }
+                            <form ref={form} onSubmit={handleSubmit} action='https://formsubmit.co/calebfunderburk@icloud.com' method='POST'>
+                                <TextField id='name' variant='filled' sx={{ m: 1, width: '80%' }} label='Name' name='name' placeholder='Enter your name' type='text' margin='normal' fullWidth required onChange={handleChange} onBlur={handleChange} />
+                                <TextField id='email' variant='filled' sx={{ m: 1, width: '80%' }} label='Email' name='email' placeholder='Enter your email' type='email' margin='normal' fullWidth required onChange={handleChange} onBlur={handleChange} />
+                                <TextField id='message' variant='filled' sx={{ m: 1, width: '80%' }} label='Message' name='message' placeholder='Enter your message' type='text' margin='normal' fullWidth multiline rows={7} required onChange={handleChange} onBlur={handleChange} />
+                                <LoadingButton type='submit' variant='contained' endIcon={<Send />} size='large' sx={{ width: '40%', my: '2%' }}>Send</LoadingButton>
+                                <Snackbar
+                                    open={openSuccess}
+                                    autoHideDuration={5000}
+                                    onClose={handleClose}
+                                    anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                                >
+                                    <Alert severity='success' variant='filled' sx={{ width: '100%' }}>
+                                        Email sent successfully!
+                                    </Alert>
+                                </Snackbar>
+                                <Snackbar
+                                    open={openFailure}
+                                    autoHideDuration={5000}
+                                    onClose={handleClose}
+                                    anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                                >
+                                    <Alert severity='error' variant='filled' sx={{ width: '100%' }}>
+                                        Something went wrong, please try again!
+                                    </Alert>
+                                </Snackbar>
                             </form>
-                            <Button variant='contained' endIcon={<Send />} size='large' sx={{ width: '40%', my: '2%' }}>Send</Button>
                         </Grid>
                     </Card>
                 </Box>
