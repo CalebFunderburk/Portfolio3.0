@@ -39,7 +39,7 @@ const Resume = () => {
         >
             <Fade in={open}>
                 <Card align='right' sx={modalStyle}>
-                <Button variant='contained' startIcon={<Close/>} onClick={handleClose} sx={{ mb: 3 }} >Close</Button>
+                <Button variant='contained' endIcon={<Close/>} onClick={handleClose} sx={{ mb: 3 }} >Close</Button>
                     <CardMedia component='iframe' src='src\assets\pdfs\Full Stack Development Resume.pdf' alt='resume' height='95%' width='100%'/>
                 </Card>
             </Fade>
@@ -51,7 +51,7 @@ const Resume = () => {
             {!mobileViewport ?
                 <Box id='resume' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Typography variant='h2' align='center' pt='10%'>My Resume</Typography>
-                    <Card elevation={9} align='center' sx={{ minWidth: '85%', minHeight:'50vh', mx: '4%', mt: '10%', p: '15vh' }}>
+                    <Card elevation={9} align='center' sx={{ minWidth: '85%', minHeight:'50vh', mx: '4%', mt: '3%', p: '15vh' }}>
                         <Button variant='contained' size='large' endIcon={<Preview/>} onClick={handleOpen}>View in Browser</Button>
                         {modal}
                         <Typography variant='h5'>or</Typography>

@@ -4,11 +4,11 @@ import 'react-multi-carousel/lib/styles.css'
 
 const Skills = () => {
 
-    const mobileViewport = useMediaQuery('(max-width:950px)')
+    const mobileViewport = useMediaQuery('(max-width:1050px)')
 
     const responsive = {
         mobile: {
-            breakpoint: { max: 950, min: 0 },
+            breakpoint: { max: 1050, min: 0 },
             items: 1
         }
     }
@@ -21,10 +21,10 @@ const Skills = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh', padding: '10%' }}>
                     <Typography variant='h2' align='center' pt='10%'>Skills</Typography>
                     <Grid display='flex' justifyContent='center' alignItems='center' mt='5%' >
-                        <Card container elevation={9} sx={{ minHeight: '58vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ maxHeight: '50vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Front End'
                                 align='center'
@@ -34,32 +34,32 @@ const Skills = () => {
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\js.png' alt='javascript' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>JavaScript</Typography>
+                                        <Typography>JavaScript</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\react.png' alt='react' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>React</Typography>
+                                        <Typography>React</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\vite.png' alt='vite' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>Vite</Typography>
+                                        <Typography>Vite</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\html.png' alt='html' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>HTML</Typography>
+                                        <Typography>HTML</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\css.png' alt='css' width='55%' />
                                         <br />
-                                        <Typography variant='subtitle1'>CSS</Typography>
+                                        <Typography>CSS</Typography>
                                     </Grid>
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Card container elevation={9} sx={{ minHeight: '58vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ maxHeight: '50vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Back End'
                                 align='center'
@@ -69,42 +69,37 @@ const Skills = () => {
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\node.png' alt='node' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>Node</Typography>
+                                        <Typography>Node</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\express.png' alt='express' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>Express</Typography>
+                                        <Typography>Express</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\mysql.png' alt='mysql' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>MySQL</Typography>
+                                        <Typography>MySQL</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\sequelize.png' alt='sequelize' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>Sequelize</Typography>
+                                        <Typography>Sequelize</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\mongodb.png' alt='mongodb' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>MongoDB</Typography>
-                                    </Grid>
-                                    <Grid item align='center' xs={4}>
-                                        <img src='src\assets\images\skills\mongoose.png' alt='mongoose' width='50%' />
-                                        <br />
-                                        <Typography variant='subtitle1'>Mongoose</Typography>
+                                        <Typography>MongoDB</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\graphql.png' alt='graphql' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>GraphQL</Typography>
+                                        <Typography>GraphQL</Typography>
                                     </Grid>
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Card container elevation={9} sx={{ minHeight: '58vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ maxHeight: '50vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Tools'
                                 align='center'
@@ -114,32 +109,32 @@ const Skills = () => {
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\git.png' alt='git' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>Git</Typography>
+                                        <Typography>Git</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\heroku.png' alt='heroku' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>Heroku</Typography>
+                                        <Typography>Heroku</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\jest.png' alt='jest' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>Jest</Typography>
+                                        <Typography>Jest</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\webpack.png' alt='webpack' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>Webpack</Typography>
+                                        <Typography>Webpack</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\insomnia.png' alt='insomnia' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>Insomnia</Typography>
+                                        <Typography>Insomnia</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={4}>
                                         <img src='src\assets\images\skills\vscode.png' alt='vscode' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle1'>VS Code</Typography>
+                                        <Typography>VS Code</Typography>
                                     </Grid>
                                 </Grid>
                             </CardContent>
@@ -148,9 +143,9 @@ const Skills = () => {
                 </Box>
                 :
                 <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
-                    <Typography variant='h2' align='center' py='10%'>Skills</Typography>
+                    <Typography variant='h2' align='center' py='12%'>Skills</Typography>
                     <Carousel responsive={responsive} infinite={true} centerMode={true}>
-                        <Card container elevation={9} sx={{ minHeight: '63vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ maxHeight: '50vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Front End'
                                 align='center'
@@ -158,34 +153,34 @@ const Skills = () => {
                             <CardContent sx={{ marginTop: '10%' }}>
                                 <Grid container direction='row' justifyContent='center' alignItems='center' rowGap={3}>
                                     <Grid item align='center' xs={5}>
-                                        <img src='src\assets\images\skills\js.png' alt='javascript' width='50%' />
+                                        <img src='src\assets\images\skills\js.png' alt='javascript' width='46.5%' />
                                         <br />
-                                        <Typography variant='subtitle2'>JavaScript</Typography>
+                                        <Typography>JavaScript</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
                                         <img src='src\assets\images\skills\react.png' alt='react' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle2'>React</Typography>
+                                        <Typography>React</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
                                         <img src='src\assets\images\skills\vite.png' alt='vite' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle2'>Vite</Typography>
+                                        <Typography>Vite</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
                                         <img src='src\assets\images\skills\html.png' alt='html' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle2'>HTML</Typography>
+                                        <Typography>HTML</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
                                         <img src='src\assets\images\skills\css.png' alt='css' width='55%' />
                                         <br />
-                                        <Typography variant='subtitle2'>CSS</Typography>
+                                        <Typography>CSS</Typography>
                                     </Grid>
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Card container elevation={9} sx={{ minHeight: '63vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ maxHeight: '50vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Back End'
                                 align='center'
@@ -193,44 +188,39 @@ const Skills = () => {
                             <CardContent sx={{ marginTop: '10%' }}>
                                 <Grid container direction='row' justifyContent='center' alignItems='center' rowGap={3}>
                                     <Grid item align='center' xs={5}>
-                                        <img src='src\assets\images\skills\node.png' alt='node' width='50%' />
+                                        <img src='src\assets\images\skills\node.png' alt='node' width='45%' />
                                         <br />
-                                        <Typography variant='subtitle2'>Node</Typography>
+                                        <Typography>Node</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
-                                        <img src='src\assets\images\skills\express.png' alt='express' width='50%' />
+                                        <img src='src\assets\images\skills\express.png' alt='express' width='45%' />
                                         <br />
-                                        <Typography variant='subtitle2'>Express</Typography>
+                                        <Typography>Express</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
                                         <img src='src\assets\images\skills\mysql.png' alt='mysql' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle2'>MySQL</Typography>
+                                        <Typography>MySQL</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
-                                        <img src='src\assets\images\skills\sequelize.png' alt='sequelize' width='50%' />
+                                        <img src='src\assets\images\skills\sequelize.png' alt='sequelize' width='45%' />
                                         <br />
-                                        <Typography variant='subtitle2'>Sequelize</Typography>
+                                        <Typography>Sequelize</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
                                         <img src='src\assets\images\skills\mongodb.png' alt='mongodb' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle2'>MongoDB</Typography>
+                                        <Typography>MongoDB</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
-                                        <img src='src\assets\images\skills\mongoose.png' alt='mongoose' width='50%' />
+                                        <img src='src\assets\images\skills\graphql.png' alt='graphql' width='45%' />
                                         <br />
-                                        <Typography variant='subtitle2'>Mongoose</Typography>
-                                    </Grid>
-                                    <Grid item align='center' xs={5}>
-                                        <img src='src\assets\images\skills\graphql.png' alt='graphql' width='50%' />
-                                        <br />
-                                        <Typography variant='subtitle2'>GraphQL</Typography>
+                                        <Typography>GraphQL</Typography>
                                     </Grid>
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Card container elevation={9} sx={{ minHeight: '63vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ maxHeight: '50vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Tools'
                                 align='center'
@@ -240,32 +230,32 @@ const Skills = () => {
                                     <Grid item align='center' xs={5}>
                                         <img src='src\assets\images\skills\git.png' alt='git' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle2'>Git</Typography>
+                                        <Typography>Git</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
                                         <img src='src\assets\images\skills\heroku.png' alt='heroku' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle2'>Heroku</Typography>
+                                        <Typography>Heroku</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
                                         <img src='src\assets\images\skills\jest.png' alt='jest' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle2'>Jest</Typography>
+                                        <Typography>Jest</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
                                         <img src='src\assets\images\skills\webpack.png' alt='webpack' width='50%' />
                                         <br />
-                                        <Typography variant='subtitle2'>Webpack</Typography>
+                                        <Typography>Webpack</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
-                                        <img src='src\assets\images\skills\insomnia.png' alt='insomnia' width='50%' />
+                                        <img src='src\assets\images\skills\insomnia.png' alt='insomnia' width='45%' />
                                         <br />
-                                        <Typography variant='subtitle2'>Insomnia</Typography>
+                                        <Typography>Insomnia</Typography>
                                     </Grid>
                                     <Grid item align='center' xs={5}>
-                                        <img src='src\assets\images\skills\vscode.png' alt='vscode' width='50%' />
+                                        <img src='src\assets\images\skills\vscode.png' alt='vscode' width='45%' />
                                         <br />
-                                        <Typography variant='subtitle2'>VS Code</Typography>
+                                        <Typography>VS Code</Typography>
                                     </Grid>
                                 </Grid>
                             </CardContent>

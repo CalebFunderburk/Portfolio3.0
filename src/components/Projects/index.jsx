@@ -20,7 +20,7 @@ const Projects = () => {
             repo: 'https://github.com/PuppetAJ/ReactMC',
             image: 'src/assets/images/screenshots/chunkd-screenshot.png',
             role: 'Backend Developer',
-            desc: 'MERN stack Minecraft clone where users save & share their builds.',
+            desc: 'MERN stack Minecraft clone where users can create, save, & share their builds.',
             tech: 'React, Express, Node, MongoDB, GraphQL, ThreeJS, JWT, Tailwind, Heroku'
         },
         {
@@ -37,7 +37,7 @@ const Projects = () => {
             link: 'https://tech-talk-0.herokuapp.com/',
             repo: 'https://github.com/CalebFunderburk/Tech-Talk',
             image: 'src/assets/images/screenshots/techtalk-screenshot.png',
-            role: 'Full Stack Developer',
+            role: 'Lead Developer',
             desc: 'MVC forum application built for trends in technology.',
             tech: 'JavaScript, Node, Express, Handlebars, Sequelize, Bootstrap, Heroku'
         },
@@ -62,18 +62,19 @@ const Projects = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box id='projects' py='10vh' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                    <Typography variant='h2' align='center' py='2%'>My Work</Typography>
                     <Grid container justifyContent='center' rowGap={2} columnSpacing={2}>
                         <Grid item xs={5}>
                             <Card elevation={9} sx={{ minHeight: '40vh' }}>
                                 <CardMedia
                                     component='img'
                                     alt='screenshot'
-                                    height='140'
+                                    height='300'
                                     image={projects[0].image}
                                 />
                                 <CardContent>
-                                    <Typography variant='h5' component='div' gutterBottom>{projects[0].title}</Typography>
+                                    <Typography variant='h4' component='div'>{projects[0].title}</Typography>
                                     <Typography variant='subtitle1' gutterBottom>{projects[0].role}</Typography>
                                     <Typography variant='body2' gutterBottom>{projects[0].desc}</Typography>
                                     <Typography variant='body2'>Built with: {projects[0].tech}</Typography>
@@ -90,10 +91,10 @@ const Projects = () => {
                         </Grid>
                         <Grid item xs={5}>
                             <Card elevation={9} sx={{ minHeight: '40vh' }}>
-                            <CardMedia
+                                <CardMedia
                                     component='img'
                                     alt='screenshot'
-                                    height='140'
+                                    height='300'
                                     image={projects[1].image}
                                 />
                                 <CardContent>
@@ -114,10 +115,10 @@ const Projects = () => {
                         </Grid>
                         <Grid item xs={5}>
                             <Card elevation={9} sx={{ minHeight: '40vh' }}>
-                            <CardMedia
+                                <CardMedia
                                     component='img'
                                     alt='screenshot'
-                                    height='140'
+                                    height='300'
                                     image={projects[2].image}
                                 />
                                 <CardContent>
@@ -138,10 +139,10 @@ const Projects = () => {
                         </Grid>
                         <Grid item xs={5}>
                             <Card elevation={9} sx={{ minHeight: '40vh' }}>
-                            <CardMedia
+                                <CardMedia
                                     component='img'
                                     alt='screenshot'
-                                    height='140'
+                                    height='300'
                                     image={projects[3].image}
                                 />
                                 <CardContent>
@@ -163,103 +164,96 @@ const Projects = () => {
                     </Grid>
                 </Box>
                 :
-                <Box id='projects' py='25vh' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
+                <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
+                    <Typography variant='h2' align='center' py='12%'>My Work</Typography>
                     <Carousel responsive={responsive} infinite={true} centerMode={true}>
-                        <Card elevation={9} sx={{ minHeight: '50vh', mx: 1 }}>
-                            <Typography>
+                        <Card elevation={9} sx={{ minHeight: '47vh', minWidth: '60vw', mx: 1 }}>
                             <CardMedia
-                                    component='img'
-                                    alt='screenshot'
-                                    height='140'
-                                    image={projects[0].image}
-                                />
-                                <CardContent>
-                                    <Typography variant='h5' component='div' gutterBottom>{projects[0].title}</Typography>
-                                    <Typography variant='subtitle1' gutterBottom>{projects[0].role}</Typography>
-                                    <Typography variant='body2' gutterBottom>{projects[0].desc}</Typography>
-                                    <Typography variant='body2'>Built with: {projects[0].tech}</Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Link href={projects[0].link} target='_blank'>
-                                        <Button size='small'>Visit Application</Button>
-                                    </Link>
-                                    <Link href={projects[0].repo} target='_blank'>
-                                        <Button size='small'>GitHub Repo</Button>
-                                    </Link>
-                                </CardActions>
-                            </Typography>
+                                component='img'
+                                alt='screenshot'
+                                height='300'
+                                image={projects[0].image}
+                            />
+                            <CardContent>
+                                <Typography variant='h5' component='div' gutterBottom>{projects[0].title}</Typography>
+                                <Typography variant='subtitle1' gutterBottom>{projects[0].role}</Typography>
+                                <Typography variant='body2' gutterBottom>{projects[0].desc}</Typography>
+                                <Typography variant='body2'>Built with: {projects[0].tech}</Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Link href={projects[0].link} target='_blank'>
+                                    <Button size='small'>Visit Application</Button>
+                                </Link>
+                                <Link href={projects[0].repo} target='_blank'>
+                                    <Button size='small'>GitHub Repo</Button>
+                                </Link>
+                            </CardActions>
                         </Card>
-                        <Card elevation={9} sx={{ minHeight: '50vh', mx: 1 }}>
-                            <Typography>
+                        <Card elevation={9} sx={{ minHeight: '47vh', minWidth: '60vw', mx: 1 }}>
                             <CardMedia
-                                    component='img'
-                                    alt='screenshot'
-                                    height='140'
-                                    image={projects[1].image}
-                                />
-                                <CardContent>
-                                    <Typography variant='h5' component='div' gutterBottom>{projects[1].title}</Typography>
-                                    <Typography variant='subtitle1' gutterBottom>{projects[1].role}</Typography>
-                                    <Typography variant='body2' gutterBottom>{projects[1].desc}</Typography>
-                                    <Typography variant='body2'>Built with: {projects[1].tech}</Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Link href={projects[1].link} target='_blank'>
-                                        <Button size='small'>Visit Application</Button>
-                                    </Link>
-                                    <Link href={projects[1].repo} target='_blank'>
-                                        <Button size='small'>GitHub Repo</Button>
-                                    </Link>
-                                </CardActions>
-                            </Typography>
+                                component='img'
+                                alt='screenshot'
+                                height='300'
+                                image={projects[1].image}
+                            />
+                            <CardContent>
+                                <Typography variant='h5' component='div' gutterBottom>{projects[1].title}</Typography>
+                                <Typography variant='subtitle1' gutterBottom>{projects[1].role}</Typography>
+                                <Typography variant='body2' gutterBottom>{projects[1].desc}</Typography>
+                                <Typography variant='body2'>Built with: {projects[1].tech}</Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Link href={projects[1].link} target='_blank'>
+                                    <Button size='small'>Visit Application</Button>
+                                </Link>
+                                <Link href={projects[1].repo} target='_blank'>
+                                    <Button size='small'>GitHub Repo</Button>
+                                </Link>
+                            </CardActions>
                         </Card>
-                        <Card elevation={9} sx={{ minHeight: '50vh', mx: 1 }}>
-                            <Typography>
+                        <Card elevation={9} sx={{ minHeight: '47vh', minWidth: '60vw', mx: 1 }}>
                             <CardMedia
-                                    component='img'
-                                    alt='screenshot'
-                                    height='140'
-                                    image={projects[2].image}
-                                />
-                                <CardContent>
-                                    <Typography variant='h5' component='div' gutterBottom>{projects[2].title}</Typography>
-                                    <Typography variant='subtitle1' gutterBottom>{projects[2].role}</Typography>
-                                    <Typography variant='body2' gutterBottom>{projects[2].desc}</Typography>
-                                    <Typography variant='body2'>Built with: {projects[2].tech}</Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Link href={projects[2].link} target='_blank'>
-                                        <Button size='small'>Visit Application</Button>
-                                    </Link>
-                                    <Link href={projects[2].repo} target='_blank'>
-                                        <Button size='small'>GitHub Repo</Button>
-                                    </Link>
-                                </CardActions>
-                            </Typography>
+                                component='img'
+                                alt='screenshot'
+                                height='300'
+                                image={projects[2].image}
+                            />
+                            <CardContent>
+                                <Typography variant='h5' component='div' gutterBottom>{projects[2].title}</Typography>
+                                <Typography variant='subtitle1' gutterBottom>{projects[2].role}</Typography>
+                                <Typography variant='body2' gutterBottom>{projects[2].desc}</Typography>
+                                <Typography variant='body2'>Built with: {projects[2].tech}</Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Link href={projects[2].link} target='_blank'>
+                                    <Button size='small'>Visit Application</Button>
+                                </Link>
+                                <Link href={projects[2].repo} target='_blank'>
+                                    <Button size='small'>GitHub Repo</Button>
+                                </Link>
+                            </CardActions>
                         </Card>
-                        <Card elevation={9} sx={{ minHeight: '50vh', mx: 1 }}>
-                            <Typography>
+                        <Card elevation={9} sx={{ minHeight: '47vh', minWidth: '60vw', mx: 1 }}>
                             <CardMedia
-                                    component='img'
-                                    alt='screenshot'
-                                    height='140'
-                                    image={projects[3].image}
-                                />
-                                <CardContent>
-                                    <Typography variant='h5' component='div' gutterBottom>{projects[3].title}</Typography>
-                                    <Typography variant='subtitle1' gutterBottom>{projects[3].role}</Typography>
-                                    <Typography variant='body2' gutterBottom>{projects[3].desc}</Typography>
-                                    <Typography variant='body2'>Built with: {projects[3].tech}</Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Link href={projects[3].link} target='_blank'>
-                                        <Button size='small'>Visit Application</Button>
-                                    </Link>
-                                    <Link href={projects[3].repo} target='_blank'>
-                                        <Button size='small'>GitHub Repo</Button>
-                                    </Link>
-                                </CardActions>
-                            </Typography>
+                                component='img'
+                                alt='screenshot'
+                                height='300'
+                                image={projects[3].image}
+                            />
+                            <CardContent>
+                                <Typography variant='h5' component='div' gutterBottom>{projects[3].title}</Typography>
+                                <Typography variant='subtitle1' gutterBottom>{projects[3].role}</Typography>
+                                <Typography variant='body2' gutterBottom>{projects[3].desc}</Typography>
+                                <Typography variant='body2'>Built with: {projects[3].tech}</Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Link href={projects[3].link} target='_blank'>
+                                    <Button size='small'>Visit Application</Button>
+                                </Link>
+                                <Link href={projects[3].repo} target='_blank'>
+                                    <Button size='small'>GitHub Repo</Button>
+                                </Link>
+                            </CardActions>
                         </Card>
                     </Carousel>
                 </Box>
