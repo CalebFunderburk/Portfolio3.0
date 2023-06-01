@@ -24,7 +24,7 @@ const Skills = () => {
                 <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh', padding: '10%' }}>
                     <Typography variant='h2' align='center' pt='10%'>Skills</Typography>
                     <Grid display='flex' justifyContent='center' alignItems='center' mt='5%' >
-                        <Card container elevation={9} sx={{ maxHeight: '50vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ maxHeight: '40vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Front End'
                                 align='center'
@@ -59,7 +59,7 @@ const Skills = () => {
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Card container elevation={9} sx={{ maxHeight: '50vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ maxHeight: '40vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Back End'
                                 align='center'
@@ -99,7 +99,7 @@ const Skills = () => {
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Card container elevation={9} sx={{ maxHeight: '50vh', minWidth: '30%', mx: '1%' }}>
+                        <Card container elevation={9} sx={{ maxHeight: '40vh', minWidth: '30%', mx: '1%' }}>
                             <CardHeader
                                 title='Tools'
                                 align='center'
