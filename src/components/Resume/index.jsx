@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Typography, Box, Card, CardMedia, Button, Modal, Fade, Backdrop, useMediaQuery } from '@mui/material'
+import { Typography, Box, Stack, Card, CardMedia, Button, Modal, Fade, Backdrop, useMediaQuery } from '@mui/material'
 import { Preview, Download, Close } from '@mui/icons-material'
 
 const Resume = () => {
@@ -49,24 +49,28 @@ const Resume = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box id='resume' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
-                    <Typography variant='h2' align='center' pt='10%'>My Resume</Typography>
-                    <Card elevation={9} align='center' sx={{ minWidth: '85%', minHeight:'50vh', mx: '4%', mt: '3%', p: '15vh' }}>
-                        <Button variant='contained' size='large' endIcon={<Preview/>} onClick={handleOpen}>View in Browser</Button>
-                        {modal}
-                        <Typography variant='h5'>or</Typography>
-                        <a download href='src\assets\pdfs\Full Stack Development Resume.pdf'><Button variant='contained' size='large' endIcon={<Download/>}>Download</Button></a>
-                    </Card>
+                <Box id='resume'  sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                    <Stack direction='column' justifyContent='center' alignItems='center' spacing={2}>
+                        <Typography variant='h2' align='center' pt='10%'>My Resume</Typography>
+                        <Card elevation={9} align='center' sx={{ maxWidth: '80%', minHeight:'40vh', mx: '4%', mt: '3%', p: '15vh' }}>
+                            <Button variant='contained' size='large' endIcon={<Preview/>} onClick={handleOpen}>View in Browser</Button>
+                            {modal}
+                            <Typography variant='h5'>or</Typography>
+                            <a download href='src\assets\pdfs\Full Stack Development Resume.pdf'><Button variant='contained' size='large' endIcon={<Download/>}>Download</Button></a>
+                        </Card>
+                    </Stack>
                 </Box>
                 :
                 <Box id='resume' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
-                    <Typography variant='h2' align='center' pt='10%'>My Resume</Typography>
-                    <Card elevation={9} align='center' sx={{ minWidth: '85%', minHeight:'50vh', mx: '4%', mt: '10%', p: '15vh' }}>
-                        <Button variant='contained' size='large' endIcon={<Preview/>} onClick={handleOpen}>View in Browser</Button>
-                        {modal}
-                        <Typography variant='h5'>or</Typography>
-                        <a download href='src\assets\pdfs\Full Stack Development Resume.pdf'><Button variant='contained' size='large' endIcon={<Download/>}>Download</Button></a>
-                    </Card>
+                    <Stack direction='column' justifyContent='center' alignItems='center' spacing={2}>
+                        <Typography variant='h2' align='center' pt='10%'>My Resume</Typography>
+                        <Card elevation={9} align='center' sx={{ minWidth: '85%', minHeight:'50vh', mx: '4%', mt: '10%', p: '15vh' }}>
+                            <Button variant='contained' size='large' endIcon={<Preview/>} onClick={handleOpen}>View in Browser</Button>
+                            {modal}
+                            <Typography variant='h5'>or</Typography>
+                            <a download href='src\assets\pdfs\Full Stack Development Resume.pdf'><Button variant='contained' size='large' endIcon={<Download/>}>Download</Button></a>
+                        </Card>
+                    </Stack>
                 </Box>
             }
         </>

@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { Typography, Box, Grid, Card, TextField, Button, Alert, Snackbar, IconButton, useMediaQuery } from '@mui/material'
+import { Typography, Box, Stack, Grid, Card, TextField, Button, Alert, Snackbar, IconButton, useMediaQuery } from '@mui/material'
 import { LoadingButton } from '@mui/lab'
 import { Send, Close } from '@mui/icons-material'
 import { validateEmail } from '../../utils/helpers'
@@ -86,43 +86,45 @@ const Contact = () => {
         <>
             {!mobileViewport ?
                 <Box id='contact' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
-                    <Card elevation={9} sx={{ maxWidth: '80%', minHeight: '40vh' }}>
+                    <Stack direction='column' justifyContent='center' alignItems='center' spacing={2}>
                         <Typography variant='h3' align='center'>Contact</Typography>
-                        <Grid align='center'>
-                            {errorMessage ?
-                                <Alert severity='error' variant='filled' sx={{ mx: '17%' }}>{errorMessage}</Alert>
-                                :
-                                null
-                            }
-                            <form ref={form} onSubmit={handleSubmit} action='https://formsubmit.co/calebfunderburk@icloud.com' method='POST'>
-                                <TextField id='name' variant='filled' sx={{ m: 1, width: '65%' }} label='Name' name='name' placeholder='Enter your name' type='text' margin='normal' fullWidth required onChange={handleChange} onBlur={handleChange} />
-                                <TextField id='email' variant='filled' sx={{ m: 1, width: '65%' }} label='Email' name='email' placeholder='Enter your email' type='email' margin='normal' fullWidth required onChange={handleChange} onBlur={handleChange} />
-                                <TextField id='message' variant='filled' sx={{ m: 1, width: '65%' }} label='Message' name='message' placeholder='Enter your message' type='text' margin='normal' fullWidth multiline rows={7} required onChange={handleChange} onBlur={handleChange} />
-                                <br />
-                                <LoadingButton type='submit' variant='contained' endIcon={<Send />} size='large' sx={{ width: '20%', my: '2%' }}>Send</LoadingButton>
-                                <Snackbar
-                                    open={openSuccess}
-                                    autoHideDuration={5000}
-                                    onClose={handleClose}
-                                    anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-                                >
-                                    <Alert severity='success' variant='filled' sx={{ width: '100%' }}>
-                                        Email sent successfully!
-                                    </Alert>
-                                </Snackbar>
-                                <Snackbar
-                                    open={openFailure}
-                                    autoHideDuration={5000}
-                                    onClose={handleClose}
-                                    anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-                                >
-                                    <Alert severity='error' variant='filled' sx={{ width: '100%' }}>
-                                        Something went wrong, please try again!
-                                    </Alert>
-                                </Snackbar>
-                            </form>
-                        </Grid>
-                    </Card>
+                        <Card elevation={9} sx={{ maxWidth: '80%', minHeight: '40vh' }}>
+                            <Grid align='center'>
+                                {errorMessage ?
+                                    <Alert severity='error' variant='filled' sx={{ mx: '17%' }}>{errorMessage}</Alert>
+                                    :
+                                    null
+                                }
+                                <form ref={form} onSubmit={handleSubmit} action='https://formsubmit.co/calebfunderburk@icloud.com' method='POST'>
+                                    <TextField id='name' variant='filled' sx={{ m: 1, width: '65%' }} label='Name' name='name' placeholder='Enter your name' type='text' margin='normal' fullWidth required onChange={handleChange} onBlur={handleChange} />
+                                    <TextField id='email' variant='filled' sx={{ m: 1, width: '65%' }} label='Email' name='email' placeholder='Enter your email' type='email' margin='normal' fullWidth required onChange={handleChange} onBlur={handleChange} />
+                                    <TextField id='message' variant='filled' sx={{ m: 1, width: '65%' }} label='Message' name='message' placeholder='Enter your message' type='text' margin='normal' fullWidth multiline rows={7} required onChange={handleChange} onBlur={handleChange} />
+                                    <br />
+                                    <LoadingButton type='submit' variant='contained' endIcon={<Send />} size='large' sx={{ width: '20%', my: '2%' }}>Send</LoadingButton>
+                                    <Snackbar
+                                        open={openSuccess}
+                                        autoHideDuration={5000}
+                                        onClose={handleClose}
+                                        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                                    >
+                                        <Alert severity='success' variant='filled' sx={{ width: '100%' }}>
+                                            Email sent successfully!
+                                        </Alert>
+                                    </Snackbar>
+                                    <Snackbar
+                                        open={openFailure}
+                                        autoHideDuration={5000}
+                                        onClose={handleClose}
+                                        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                                    >
+                                        <Alert severity='error' variant='filled' sx={{ width: '100%' }}>
+                                            Something went wrong, please try again!
+                                        </Alert>
+                                    </Snackbar>
+                                </form>
+                            </Grid>
+                        </Card>
+                    </Stack>
                 </Box>
                 :
                 <Box id='contact' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
