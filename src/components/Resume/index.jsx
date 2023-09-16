@@ -49,7 +49,7 @@ const Resume = () => {
     return (
         <>
             {!mobileViewport ?
-                <Box id='resume'  sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                <Box id='resume' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Stack direction='column' justifyContent='center' alignItems='center' spacing={2}>
                         <Typography variant='h2' align='center' pt='10%'>My Resume</Typography>
                         <Card elevation={9} align='center' sx={{ maxWidth: '80%', minHeight:'40vh', mx: '4%', mt: '3%', p: '15vh' }}>
@@ -61,7 +61,7 @@ const Resume = () => {
                     </Stack>
                 </Box>
                 :
-                <Box id='resume' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                <Box id='resume' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Stack direction='column' justifyContent='center' alignItems='center' spacing={2}>
                         <Typography variant='h2' align='center' pt='10%'>My Resume</Typography>
                         <Card elevation={9} align='center' sx={{ minWidth: '85%', minHeight:'50vh', mx: '4%', mt: '10%', p: '15vh' }}>

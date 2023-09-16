@@ -19,6 +19,7 @@ const Header = (props) => {
 
     // Notes:
     // Need to add selector for Dark Mode to navbar
+    // I changed Projects to My Work, check aria labels and stuff
 
     const socials = (
         <Box sx={{
@@ -116,7 +117,7 @@ const Header = (props) => {
                                     <Button aria-label='Skills' color='inherit'>Skills</Button>
                                 </Link>
                                 <Link to='projects' spy={true} smooth={true} offset={-64} duration={500}>
-                                    <Button aria-label='Projects' color='inherit'>Projects</Button>
+                                    <Button aria-label='Projects' color='inherit'>My Work</Button>
                                 </Link>
                                 <Link to='resume' spy={true} smooth={true} offset={-64} duration={500}>
                                     <Button aria-label='Resume' color='inherit'>Resume</Button>
