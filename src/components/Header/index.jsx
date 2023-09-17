@@ -20,6 +20,7 @@ const Header = (props) => {
     // Notes:
     // Need to add selector for Dark Mode to navbar
     // I changed Projects to My Work, check aria labels and stuff
+    // Refactor this code to map through variables instead of hard coding data for better performance
 
     const socials = (
         <Box sx={{
