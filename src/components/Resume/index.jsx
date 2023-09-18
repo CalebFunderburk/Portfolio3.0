@@ -46,6 +46,8 @@ const Resume = () => {
         </Modal>
     )
 
+    // Need to position whole component the same way Contact is
+
     return (
         <>
             {!mobileViewport ?

@@ -123,7 +123,7 @@ const Skills = () => {
                     <Stack direction='row' justifyContent='space-around' alignItems='center' spacing={2} sx={{ my: 5 }}>
                         <Card elevation={5} sx={{ maxWidth: '300px', p: 1 }}>
                             <Typography variant='h4' align='center'>Front End</Typography>
-                            <ImageList sx={{ width: 285, height: 270 }} cols={3} rowHeight={85}>
+                            <ImageList sx={{ width: 285, height: 240 }} cols={3} rowHeight={85}>
                                 {skillsFront.map((skill) => (
                                     <ImageListItem key={skill.name}>
                                         <img
@@ -142,7 +142,7 @@ const Skills = () => {
                         </Card>
                         <Card elevation={5} sx={{ maxWidth: '300px', p: 1 }}>
                             <Typography variant='h4' align='center'>Back End</Typography>
-                            <ImageList sx={{ width: 285, height: 270 }} cols={3} rowHeight={85}>
+                            <ImageList sx={{ width: 285, height: 240 }} cols={3} rowHeight={85}>
                                 {skillsBack.map((skill) => (
                                     <ImageListItem key={skill.name}>
                                         <img
@@ -163,7 +163,7 @@ const Skills = () => {
                     <Stack direction='row' justifyContent='space-around' alignItems='center' spacing={2}>
                         <Card elevation={5} sx={{ maxWidth: '300px', p: 1 }}>
                             <Typography variant='h4' align='center'>Tools</Typography>
-                            <ImageList sx={{ width: 285, height: 270 }} cols={3} rowHeight={85}>
+                            <ImageList sx={{ width: 285, height: 240 }} cols={3} rowHeight={85}>
                                 {tools.map((skill) => (
                                     <ImageListItem key={skill.name}>
                                         <img
@@ -290,7 +290,6 @@ const Skills = () => {
                                 ))}
                             </ImageList>
                         </Card>
-                    
                         <Card elevation={5} sx={{ maxWidth: '415px', p: 1 }}>
                             <Typography variant='h4' align='center'>Tools</Typography>
                             <ImageList sx={{ width: 385, height: 325 }} cols={3} rowHeight={125}>

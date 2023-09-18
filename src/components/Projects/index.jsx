@@ -1,14 +1,18 @@
-import { Typography, Box, Grid, Card, CardMedia, CardContent, CardActions, Button, Link, useMediaQuery } from '@mui/material'
+import { useState } from 'react'
+import { Typography, Box, Grid, Stack, Card, Modal, Fade, Backdrop, CardMedia, CardContent, CardActions, Button, Link, useMediaQuery } from '@mui/material'
+import { Close } from '@mui/icons-material'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
 const Projects = () => {
 
-    const mobileViewport = useMediaQuery('(max-width:1100px)')
+    const desktopViewport = useMediaQuery('(min-width: 1201px)')
+    const tabletViewport = useMediaQuery('(max-width: 1200px) and (min-width: 601px)')
+    const mobileViewport = useMediaQuery('(max-width: 600px)')
 
     const responsive = {
-        mobile: {
-            breakpoint: { max: 1100, min: 0 },
+        tablet: {
+            breakpoint: { max: 1200, min: 0 },
             items: 1
         }
     }
@@ -42,7 +46,7 @@ const Projects = () => {
             tech: 'JavaScript, Node, Express, Handlebars, Sequelize, Bootstrap, Heroku'
         },
         {
-            title: 'Weather On The Go',
+            title: 'On The Go',
             link: 'https://calebfunderburk.github.io/On-The-Go/',
             repo: 'https://github.com/CalebFunderburk/On-The-Go',
             image: 'src/assets/images/screenshots/onthego-screenshot.png',
@@ -53,211 +57,172 @@ const Projects = () => {
 
     ]
 
+    const modalStyle = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '80%',
+        height: '515px',
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24
+    }
+
+    const [open, setOpen] = useState(false)
+    const handleOpen = () => setOpen(true)
+    const handleClose = () => setOpen(false)
+
     // Notes:
     // Really like the Carousel on the mobile viewport, maybe include it in desktop version?
     // Projects look really scrunched together on mobile view, specifically 300px
     // Would make code a lot cleaner if you used a for loop to display each project in the project array
+    // For mobile, you could make a modal that displays details for the project
+
 
 
     return (
         <>
-            {!mobileViewport ?
+            {tabletViewport ?
                 <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Typography variant='h2' align='center' py='2%'>My Work</Typography>
-                    <Grid container justifyContent='center' rowGap={2} columnSpacing={2}>
-                        <Grid item xs={5}>
-                            <Card elevation={9} sx={{ minHeight: '40vh' }}>
-                                <CardMedia
-                                    component='img'
-                                    alt='screenshot'
-                                    height='300'
-                                    image={projects[0].image}
-                                />
-                                <CardContent>
-                                    <Typography variant='h4' component='div'>{projects[0].title}</Typography>
-                                    <Typography variant='subtitle1' gutterBottom>{projects[0].role}</Typography>
-                                    <Typography variant='body2' gutterBottom>{projects[0].desc}</Typography>
-                                    <Typography variant='body2'>Built with: {projects[0].tech}</Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Link href={projects[0].link} target='_blank'>
-                                        <Button size='small'>Visit Application</Button>
-                                    </Link>
-                                    <Link href={projects[0].repo} target='_blank'>
-                                        <Button size='small'>GitHub Repo</Button>
-                                    </Link>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        <Grid item xs={5}>
-                            <Card elevation={9} sx={{ minHeight: '40vh' }}>
-                                <CardMedia
-                                    component='img'
-                                    alt='screenshot'
-                                    height='300'
-                                    image={projects[1].image}
-                                />
-                                <CardContent>
-                                    <Typography variant='h5' component='div' gutterBottom>{projects[1].title}</Typography>
-                                    <Typography variant='subtitle1' gutterBottom>{projects[1].role}</Typography>
-                                    <Typography variant='body2' gutterBottom>{projects[1].desc}</Typography>
-                                    <Typography variant='body2'>Built with: {projects[1].tech}</Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Link href={projects[1].link} target='_blank'>
-                                        <Button size='small'>Visit Application</Button>
-                                    </Link>
-                                    <Link href={projects[1].repo} target='_blank'>
-                                        <Button size='small'>GitHub Repo</Button>
-                                    </Link>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        <Grid item xs={5}>
-                            <Card elevation={9} sx={{ minHeight: '40vh' }}>
-                                <CardMedia
-                                    component='img'
-                                    alt='screenshot'
-                                    height='300'
-                                    image={projects[2].image}
-                                />
-                                <CardContent>
-                                    <Typography variant='h5' component='div' gutterBottom>{projects[2].title}</Typography>
-                                    <Typography variant='subtitle1' gutterBottom>{projects[2].role}</Typography>
-                                    <Typography variant='body2' gutterBottom>{projects[2].desc}</Typography>
-                                    <Typography variant='body2'>Built with: {projects[2].tech}</Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Link href={projects[2].link} target='_blank'>
-                                        <Button size='small'>Visit Application</Button>
-                                    </Link>
-                                    <Link href={projects[2].repo} target='_blank'>
-                                        <Button size='small'>GitHub Repo</Button>
-                                    </Link>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        <Grid item xs={5}>
-                            <Card elevation={9} sx={{ minHeight: '40vh' }}>
-                                <CardMedia
-                                    component='img'
-                                    alt='screenshot'
-                                    height='300'
-                                    image={projects[3].image}
-                                />
-                                <CardContent>
-                                    <Typography variant='h5' component='div' gutterBottom>{projects[3].title}</Typography>
-                                    <Typography variant='subtitle1' gutterBottom>{projects[3].role}</Typography>
-                                    <Typography variant='body2' gutterBottom>{projects[3].desc}</Typography>
-                                    <Typography variant='body2'>Built with: {projects[3].tech}</Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Link href={projects[3].link} target='_blank'>
-                                        <Button size='small'>Visit Application</Button>
-                                    </Link>
-                                    <Link href={projects[3].repo} target='_blank'>
-                                        <Button size='small'>GitHub Repo</Button>
-                                    </Link>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                    </Grid>
-                </Box>
-                :
-                <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
-                    <Typography variant='h2' align='center' py='12%'>My Work</Typography>
                     <Carousel responsive={responsive} infinite={true} centerMode={true}>
-                        <Card elevation={9} sx={{ minHeight: '47vh', minWidth: '60vw', mx: 1 }}>
-                            <CardMedia
-                                component='img'
-                                alt='screenshot'
-                                height='300'
-                                image={projects[0].image}
-                            />
-                            <CardContent>
-                                <Typography variant='h5' component='div' gutterBottom>{projects[0].title}</Typography>
-                                <Typography variant='subtitle1' gutterBottom>{projects[0].role}</Typography>
-                                <Typography variant='body2' gutterBottom>{projects[0].desc}</Typography>
-                                <Typography variant='body2'>Built with: {projects[0].tech}</Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Link href={projects[0].link} target='_blank'>
-                                    <Button size='small'>Visit Application</Button>
-                                </Link>
-                                <Link href={projects[0].repo} target='_blank'>
-                                    <Button size='small'>GitHub Repo</Button>
-                                </Link>
-                            </CardActions>
-                        </Card>
-                        <Card elevation={9} sx={{ minHeight: '47vh', minWidth: '60vw', mx: 1 }}>
-                            <CardMedia
-                                component='img'
-                                alt='screenshot'
-                                height='300'
-                                image={projects[1].image}
-                            />
-                            <CardContent>
-                                <Typography variant='h5' component='div' gutterBottom>{projects[1].title}</Typography>
-                                <Typography variant='subtitle1' gutterBottom>{projects[1].role}</Typography>
-                                <Typography variant='body2' gutterBottom>{projects[1].desc}</Typography>
-                                <Typography variant='body2'>Built with: {projects[1].tech}</Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Link href={projects[1].link} target='_blank'>
-                                    <Button size='small'>Visit Application</Button>
-                                </Link>
-                                <Link href={projects[1].repo} target='_blank'>
-                                    <Button size='small'>GitHub Repo</Button>
-                                </Link>
-                            </CardActions>
-                        </Card>
-                        <Card elevation={9} sx={{ minHeight: '47vh', minWidth: '60vw', mx: 1 }}>
-                            <CardMedia
-                                component='img'
-                                alt='screenshot'
-                                height='300'
-                                image={projects[2].image}
-                            />
-                            <CardContent>
-                                <Typography variant='h5' component='div' gutterBottom>{projects[2].title}</Typography>
-                                <Typography variant='subtitle1' gutterBottom>{projects[2].role}</Typography>
-                                <Typography variant='body2' gutterBottom>{projects[2].desc}</Typography>
-                                <Typography variant='body2'>Built with: {projects[2].tech}</Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Link href={projects[2].link} target='_blank'>
-                                    <Button size='small'>Visit Application</Button>
-                                </Link>
-                                <Link href={projects[2].repo} target='_blank'>
-                                    <Button size='small'>GitHub Repo</Button>
-                                </Link>
-                            </CardActions>
-                        </Card>
-                        <Card elevation={9} sx={{ minHeight: '47vh', minWidth: '60vw', mx: 1 }}>
-                            <CardMedia
-                                component='img'
-                                alt='screenshot'
-                                height='300'
-                                image={projects[3].image}
-                            />
-                            <CardContent>
-                                <Typography variant='h5' component='div' gutterBottom>{projects[3].title}</Typography>
-                                <Typography variant='subtitle1' gutterBottom>{projects[3].role}</Typography>
-                                <Typography variant='body2' gutterBottom>{projects[3].desc}</Typography>
-                                <Typography variant='body2'>Built with: {projects[3].tech}</Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Link href={projects[3].link} target='_blank'>
-                                    <Button size='small'>Visit Application</Button>
-                                </Link>
-                                <Link href={projects[3].repo} target='_blank'>
-                                    <Button size='small'>GitHub Repo</Button>
-                                </Link>
-                            </CardActions>
-                        </Card>
+                        {projects.map((project) => (
+                            <Card elevation={4} sx={{ minHeight: '485px', mx: 2 }}>
+                                <CardMedia
+                                    component='img'
+                                    alt='screenshot'
+                                    height='175'
+                                    image={project.image}
+                                />
+                                <CardContent>
+                                    <Stack direction='row' justifyContent='flex-start' alignItems='center' spacing={2}>
+                                        <Typography variant='h5' component='div'>{project.title}</Typography>
+                                        <Typography gutterBottom>{project.role}</Typography>
+                                    </Stack>
+                                    <Typography variant='body2' gutterBottom>{project.desc}</Typography>
+                                    <Typography>Built with:</Typography>
+                                    <Typography variant='body2'>{project.tech}</Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Link href={project.link} target='_blank'>
+                                        <Button size='small'>Visit App</Button>
+                                    </Link>
+                                    <Link href={project.repo} target='_blank'>
+                                        <Button size='small'>View Repo</Button>
+                                    </Link>
+                                </CardActions>
+                            </Card>
+                        ))}
                     </Carousel>
                 </Box>
+                : mobileViewport ?
+                    <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
+                        <Typography variant='h2' align='center' py='2%'>My Work</Typography>
+                        <Carousel responsive={responsive} infinite={true} centerMode={true}>
+                            {projects.map((project) => (
+                                <Card elevation={4} sx={{ minHeight: '350px', mx: 1 }}>
+                                    <CardMedia
+                                        component='img'
+                                        alt='screenshot'
+                                        height='100'
+                                        image={project.image}
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom>{project.title}</Typography>
+                                        <Button variant='contained' onClick={handleOpen} sx={{ my: 2 }}>Click here for Details</Button>
+                                        <Modal
+                                            aria-labelledby='transition-modal-title'
+                                            aria-describedby='transition-modal-description'
+                                            open={open}
+                                            onClose={handleClose}
+                                            closeAfterTransition
+                                            slots={{ backdrop: Backdrop }}
+                                            slotProps={{
+                                                backdrop: {
+                                                    timeout: 500
+                                                }
+                                            }}
+                                        >
+                                            <Fade in={open}>
+                                                <Card sx={modalStyle}>
+                                                    <CardMedia
+                                                        component='img'
+                                                        alt='screenshot'
+                                                        height='200'
+                                                        image={project.image}
+                                                    />
+                                                    <CardContent>
+                                                        <Stack direction='row' justifyContent='flex-start' alignItems='center' spacing={2}>
+                                                            <Typography variant='h5' component='div'>{project.title}</Typography>
+                                                            <Typography gutterBottom>{project.role}</Typography>
+                                                        </Stack>
+                                                        <Typography gutterBottom>{project.desc}</Typography>
+                                                        <Typography variant='h5' gutterBottom>Built with:</Typography>
+                                                        <Typography>{project.tech}</Typography>
+                                                    </CardContent>
+                                                    <CardActions>
+                                                        <Link href={project.link} target='_blank'>
+                                                            <Button size='small'>Visit App</Button>
+                                                        </Link>
+                                                        <Link href={project.repo} target='_blank'>
+                                                            <Button size='small'>View Repo</Button>
+                                                        </Link>
+                                                    </CardActions>
+                                                    <Button variant='contained' fullWidth endIcon={<Close/>} onClick={handleClose}>Close</Button>
+                                                </Card>
+                                            </Fade>
+                                        </Modal>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Link href={project.link} target='_blank'>
+                                            <Button size='small'>Visit App</Button>
+                                        </Link>
+                                        <Link href={project.repo} target='_blank'>
+                                            <Button size='small'>View Repo</Button>
+                                        </Link>
+                                    </CardActions>
+                                </Card>
+                            ))}
+                        </Carousel>
+                    </Box>
+                    :
+                    <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                        <Typography variant='h2' align='center' sx={{ pt: '20px' }}>My Work</Typography>
+                        <Grid container justifyContent='center' rowGap={1} rowSpacing={1} columnSpacing={2} sx={{ p: 2 }}>
+                            {projects.map((project) => (
+                                <Grid item xs={6}>
+                                    <Card elevation={9}>
+                                        <CardMedia
+                                            component='img'
+                                            alt='screenshot'
+                                            height='175'
+                                            image={project.image}
+                                        />
+                                        <CardContent>
+                                            <Stack direction='row' justifyContent='flex-start' alignItems='center' spacing={2}>
+                                                <Typography variant='h4' component='div'>{project.title}</Typography>
+                                                <Typography variant='h6' gutterBottom>{project.role}</Typography>
+                                            </Stack>
+                                            <Typography variant='body2' gutterBottom>{project.desc}</Typography>
+                                            <Typography>Built with:</Typography>
+                                            <Typography variant='body2'>{project.tech}</Typography>
+                                        </CardContent>
+                                        <CardActions>
+                                            <Link href={project.link} target='_blank'>
+                                                <Button size='small'>Visit App</Button>
+                                            </Link>
+                                            <Link href={project.repo} target='_blank'>
+                                                <Button size='small'>View Repo</Button>
+                                            </Link>
+                                        </CardActions>
+                                    </Card>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Box>
             }
+
         </>
     )
 

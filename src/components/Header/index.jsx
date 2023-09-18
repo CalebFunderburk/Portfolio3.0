@@ -21,10 +21,11 @@ const Header = (props) => {
     // Need to add selector for Dark Mode to navbar
     // I changed Projects to My Work, check aria labels and stuff
     // Refactor this code to map through variables instead of hard coding data for better performance
+    // Responsive drawer is currently bleeding onto the DOM under 400px view ports
 
     const socials = (
         <Box sx={{
-            width: 330,
+            width: 300,
             height: 75,
             borderBottomLeftRadius: 100,
             backgroundColor: '#1976d2',
