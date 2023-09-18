@@ -6,13 +6,13 @@ import 'react-multi-carousel/lib/styles.css'
 
 const Projects = () => {
 
-    const desktopViewport = useMediaQuery('(min-width: 1201px)')
-    const tabletViewport = useMediaQuery('(max-width: 1200px) and (min-width: 601px)')
+    const desktopViewport = useMediaQuery('(min-width: 2001px)')
+    const tabletViewport = useMediaQuery('(max-width: 2000px) and (min-width: 601px)')
     const mobileViewport = useMediaQuery('(max-width: 600px)')
 
     const responsive = {
         tablet: {
-            breakpoint: { max: 1200, min: 0 },
+            breakpoint: { max: 2000, min: 0 },
             items: 1
         }
     }
@@ -84,7 +84,7 @@ const Projects = () => {
     return (
         <>
             {tabletViewport ?
-                <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh', pt: 10  }}>
                     <Typography variant='h2' align='center' py='2%'>My Work</Typography>
                     <Carousel responsive={responsive} infinite={true} centerMode={true}>
                         {projects.map((project) => (
@@ -117,77 +117,77 @@ const Projects = () => {
                     </Carousel>
                 </Box>
                 : mobileViewport ?
-                    <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
-                        <Typography variant='h2' align='center' py='2%'>My Work</Typography>
-                        <Carousel responsive={responsive} infinite={true} centerMode={true}>
-                            {projects.map((project) => (
-                                <Card elevation={4} sx={{ minHeight: '350px', mx: 1 }}>
-                                    <CardMedia
-                                        component='img'
-                                        alt='screenshot'
-                                        height='100'
-                                        image={project.image}
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom>{project.title}</Typography>
-                                        <Button variant='contained' onClick={handleOpen} sx={{ my: 2 }}>Click here for Details</Button>
-                                        <Modal
-                                            aria-labelledby='transition-modal-title'
-                                            aria-describedby='transition-modal-description'
-                                            open={open}
-                                            onClose={handleClose}
-                                            closeAfterTransition
-                                            slots={{ backdrop: Backdrop }}
-                                            slotProps={{
-                                                backdrop: {
-                                                    timeout: 500
-                                                }
-                                            }}
-                                        >
-                                            <Fade in={open}>
-                                                <Card sx={modalStyle}>
-                                                    <CardMedia
-                                                        component='img'
-                                                        alt='screenshot'
-                                                        height='200'
-                                                        image={project.image}
-                                                    />
-                                                    <CardContent>
-                                                        <Stack direction='row' justifyContent='flex-start' alignItems='center' spacing={2}>
-                                                            <Typography variant='h5' component='div'>{project.title}</Typography>
-                                                            <Typography gutterBottom>{project.role}</Typography>
-                                                        </Stack>
-                                                        <Typography gutterBottom>{project.desc}</Typography>
-                                                        <Typography variant='h5' gutterBottom>Built with:</Typography>
-                                                        <Typography>{project.tech}</Typography>
-                                                    </CardContent>
-                                                    <CardActions>
-                                                        <Link href={project.link} target='_blank'>
-                                                            <Button size='small'>Visit App</Button>
-                                                        </Link>
-                                                        <Link href={project.repo} target='_blank'>
-                                                            <Button size='small'>View Repo</Button>
-                                                        </Link>
-                                                    </CardActions>
-                                                    <Button variant='contained' fullWidth endIcon={<Close/>} onClick={handleClose}>Close</Button>
-                                                </Card>
-                                            </Fade>
-                                        </Modal>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Link href={project.link} target='_blank'>
-                                            <Button size='small'>Visit App</Button>
-                                        </Link>
-                                        <Link href={project.repo} target='_blank'>
-                                            <Button size='small'>View Repo</Button>
-                                        </Link>
-                                    </CardActions>
-                                </Card>
-                            ))}
-                        </Carousel>
+                    <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95vh', pt: 15 }}>
+                            <Typography variant='h3' align='center' py='2%'>My Work</Typography>
+                            <Carousel responsive={responsive} infinite={true} centerMode={true}>
+                                {projects.map((project) => (
+                                    <Card elevation={4} sx={{ minHeight: '350px', mx: 1 }}>
+                                        <CardMedia
+                                            component='img'
+                                            alt='screenshot'
+                                            height='100'
+                                            image={project.image}
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom>{project.title}</Typography>
+                                            <Button variant='contained' fullWidth onClick={handleOpen} sx={{ my: 2 }}>Details</Button>
+                                            <Modal
+                                                aria-labelledby='transition-modal-title'
+                                                aria-describedby='transition-modal-description'
+                                                open={open}
+                                                onClose={handleClose}
+                                                closeAfterTransition
+                                                slots={{ backdrop: Backdrop }}
+                                                slotProps={{
+                                                    backdrop: {
+                                                        timeout: 500
+                                                    }
+                                                }}
+                                            >
+                                                <Fade in={open}>
+                                                    <Card sx={modalStyle}>
+                                                        <CardMedia
+                                                            component='img'
+                                                            alt='screenshot'
+                                                            height='200'
+                                                            image={project.image}
+                                                        />
+                                                        <CardContent>
+                                                            <Stack direction='row' justifyContent='flex-start' alignItems='center' spacing={2}>
+                                                                <Typography variant='h5' component='div'>{project.title}</Typography>
+                                                                <Typography gutterBottom>{project.role}</Typography>
+                                                            </Stack>
+                                                            <Typography gutterBottom>{project.desc}</Typography>
+                                                            <Typography variant='h5' gutterBottom>Built with:</Typography>
+                                                            <Typography>{project.tech}</Typography>
+                                                        </CardContent>
+                                                        <CardActions>
+                                                            <Link href={project.link} target='_blank'>
+                                                                <Button size='small'>Visit App</Button>
+                                                            </Link>
+                                                            <Link href={project.repo} target='_blank'>
+                                                                <Button size='small'>View Repo</Button>
+                                                            </Link>
+                                                        </CardActions>
+                                                        <Button variant='contained' fullWidth endIcon={<Close/>} onClick={handleClose}>Close</Button>
+                                                    </Card>
+                                                </Fade>
+                                            </Modal>
+                                        </CardContent>
+                                        <CardActions>
+                                            <Link href={project.link} target='_blank'>
+                                                <Button size='small'>Visit App</Button>
+                                            </Link>
+                                            <Link href={project.repo} target='_blank'>
+                                                <Button size='small'>View Repo</Button>
+                                            </Link>
+                                        </CardActions>
+                                    </Card>
+                                ))}
+                            </Carousel>
                     </Box>
                     :
-                    <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                    <Box id='projects' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh', pt: 15 }}>
                         <Typography variant='h2' align='center' sx={{ pt: '20px' }}>My Work</Typography>
                         <Grid container justifyContent='center' rowGap={1} rowSpacing={1} columnSpacing={2} sx={{ p: 2 }}>
                             {projects.map((project) => (

@@ -120,10 +120,10 @@ const Skills = () => {
             {tabletViewport ?
                 <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Typography variant='h2' align='center' sx={{ pt: '20px' }}>Skills</Typography>
-                    <Stack direction='row' justifyContent='space-around' alignItems='center' spacing={2} sx={{ my: 5 }}>
+                    <Stack direction='row' justifyContent='space-around' alignItems='center' spacing={2} sx={{ my: 3 }}>
                         <Card elevation={5} sx={{ maxWidth: '300px', p: 1 }}>
                             <Typography variant='h4' align='center'>Front End</Typography>
-                            <ImageList sx={{ width: 285, height: 240 }} cols={3} rowHeight={85}>
+                            <ImageList sx={{ width: 285, height: 200 }} cols={3} rowHeight={85}>
                                 {skillsFront.map((skill) => (
                                     <ImageListItem key={skill.name}>
                                         <img
@@ -142,7 +142,7 @@ const Skills = () => {
                         </Card>
                         <Card elevation={5} sx={{ maxWidth: '300px', p: 1 }}>
                             <Typography variant='h4' align='center'>Back End</Typography>
-                            <ImageList sx={{ width: 285, height: 240 }} cols={3} rowHeight={85}>
+                            <ImageList sx={{ width: 285, height: 200}} cols={3} rowHeight={85}>
                                 {skillsBack.map((skill) => (
                                     <ImageListItem key={skill.name}>
                                         <img
@@ -163,7 +163,7 @@ const Skills = () => {
                     <Stack direction='row' justifyContent='space-around' alignItems='center' spacing={2}>
                         <Card elevation={5} sx={{ maxWidth: '300px', p: 1 }}>
                             <Typography variant='h4' align='center'>Tools</Typography>
-                            <ImageList sx={{ width: 285, height: 240 }} cols={3} rowHeight={85}>
+                            <ImageList sx={{ width: 285, height: 200 }} cols={3} rowHeight={85}>
                                 {tools.map((skill) => (
                                     <ImageListItem key={skill.name}>
                                         <img
@@ -183,8 +183,8 @@ const Skills = () => {
                     </Stack>
                 </Box>
                 : mobileViewport ?
-                    <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95vh' }}>
-                        <Typography variant='h4' align='center' sx={{ py: '60px' }}>Skills</Typography>
+                    <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95vh', pt: 15 }}>
+                        <Typography variant='h3' align='center'>Skills</Typography>
                         <Carousel responsive={responsive} infinite={true} centerMode={true} removeArrowOnDeviceType='tablet'>
                             <Card elevation={5} sx={{ maxWidth: '185px', p: 1 }}>
                                 <Typography variant='h5' align='center'>Front End</Typography>
@@ -249,12 +249,12 @@ const Skills = () => {
                         </Carousel>
                     </Box>
                     :
-                    <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
+                    <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh', pt: 15  }}>
                     <Typography variant='h2' align='center' sx={{ pt: '20px' }}>Skills</Typography>
-                    <Stack direction='row' justifyContent='space-around' alignItems='center' spacing={2} sx={{ my: 5 }}>
+                    <Stack direction='row' justifyContent='space-around' alignItems='center' spacing={1} sx={{ my: 5 }}>
                         <Card elevation={5} sx={{ maxWidth: '415px', p: 1 }}>
                             <Typography variant='h4' align='center'>Front End</Typography>
-                            <ImageList sx={{ width: 385, height: 325 }} cols={3} rowHeight={125}>
+                            <ImageList sx={{ width: 385, height: 340 }} cols={3} rowHeight={125}>
                                 {skillsFront.map((skill) => (
                                     <ImageListItem key={skill.name}>
                                         <img
@@ -273,7 +273,7 @@ const Skills = () => {
                         </Card>
                         <Card elevation={5} sx={{ maxWidth: '415px', p: 1 }}>
                             <Typography variant='h4' align='center'>Back End</Typography>
-                            <ImageList sx={{ width: 385, height: 335 }} cols={3} rowHeight={125}>
+                            <ImageList sx={{ width: 385, height: 340 }} cols={3} rowHeight={125}>
                                 {skillsBack.map((skill) => (
                                     <ImageListItem key={skill.name}>
                                         <img
@@ -292,7 +292,7 @@ const Skills = () => {
                         </Card>
                         <Card elevation={5} sx={{ maxWidth: '415px', p: 1 }}>
                             <Typography variant='h4' align='center'>Tools</Typography>
-                            <ImageList sx={{ width: 385, height: 325 }} cols={3} rowHeight={125}>
+                            <ImageList sx={{ width: 385, height: 340 }} cols={3} rowHeight={125}>
                                 {tools.map((skill) => (
                                     <ImageListItem key={skill.name}>
                                         <img

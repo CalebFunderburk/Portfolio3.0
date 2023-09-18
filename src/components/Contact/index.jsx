@@ -88,7 +88,7 @@ const Contact = () => {
                 <Box id='contact' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Stack direction='column' justifyContent='center' alignItems='center' spacing={2}>
                         <Typography variant='h2' align='center'>Contact</Typography>
-                        <Card elevation={9} sx={{ maxWidth: '80%', minHeight: '40vh' }}>
+                        <Card elevation={9} sx={{ minHeight: '40vh' }}>
                             <Grid align='center'>
                                 {errorMessage ?
                                     <Alert severity='error' variant='filled' sx={{ m: 1 }}>{errorMessage}</Alert>
@@ -129,7 +129,7 @@ const Contact = () => {
                 :
                 <Box id='contact' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Stack direction='column' justifyContent='center' alignItems='center' spacing={2}>
-                        <Typography variant='h2' align='center'>Contact</Typography>
+                        <Typography variant='h3' align='center'>Contact</Typography>
                         <Card elevation={9} sx={{ minWidth: '85%', minHeight: '40vh' }}>
                             <Grid align='center'>
                                 {errorMessage ?

@@ -65,7 +65,7 @@ const Resume = () => {
                 :
                 <Box id='resume' display='flex' justifyContent='center' alignItems='center' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
                     <Stack direction='column' justifyContent='center' alignItems='center' spacing={2}>
-                        <Typography variant='h2' align='center' pt='10%'>My Resume</Typography>
+                        <Typography variant='h3' align='center' pt='10%'>My Resume</Typography>
                         <Card elevation={9} align='center' sx={{ minWidth: '85%', minHeight:'50vh', mx: '4%', mt: '10%', p: '15vh' }}>
                             <Button variant='contained' size='large' endIcon={<Preview/>} onClick={handleOpen}>View in Browser</Button>
                             {modal}
