@@ -250,69 +250,68 @@ const Skills = () => {
                     </Box>
                     :
                     <Box id='skills' sx={{ backgroundColor: '#e0e0e0', height: '95.5vh' }}>
-                        <Typography variant='h2' align='center' sx={{ pt: '20px' }}>Skills</Typography>
-                        <Paper elevation={9} sx={{ backgroundColor: '#575969', height: '80vh', mx: 3, pt: 2 }}>
-                            <Stack direction='row' justifyContent='space-around' alignItems='center' spacing={2}>
-                                <Card elevation={5} sx={{ p: 1 }}>
-                                    <Typography variant='h4' align='center'>Front End</Typography>
-                                    <ImageList sx={{ width: 340, height: 640 }} cols={2} rowHeight={175}>
-                                        {skillsFront.map((skill) => (
-                                            <ImageListItem key={skill.name}>
-                                                <img
-                                                    src={`${skill.img}?w=164&h=164&fit=crop&auto=format`}
-                                                    srcSet={`${skill.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                                                    alt={skill.name}
-                                                    loading='lazy'
-                                                />
-                                                <ImageListItemBar
-                                                    title={skill.name}
-                                                    align='center'
-                                                />
-                                            </ImageListItem>
-                                        ))}
-                                    </ImageList>
-                                </Card>
-                                <Card elevation={5} sx={{ p: 1 }}>
-                                    <Typography variant='h4' align='center'>Back End</Typography>
-                                    <ImageList sx={{ width: 340, height: 640 }} cols={2} rowHeight={175}>
-                                        {skillsBack.map((skill) => (
-                                            <ImageListItem key={skill.name}>
-                                                <img
-                                                    src={`${skill.img}?w=164&h=164&fit=crop&auto=format`}
-                                                    srcSet={`${skill.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                                                    alt={skill.name}
-                                                    loading='lazy'
-                                                />
-                                                <ImageListItemBar
-                                                    title={skill.name}
-                                                    align='center'
-                                                />
-                                            </ImageListItem>
-                                        ))}
-                                    </ImageList>
-                                </Card>
-                                <Card elevation={5} sx={{ p: 1 }}>
-                                    <Typography variant='h4' align='center'>Tools</Typography>
-                                    <ImageList sx={{ width: 340, height: 640 }} cols={2} rowHeight={175}>
-                                        {tools.map((skill) => (
-                                            <ImageListItem key={skill.name}>
-                                                <img
-                                                    src={`${skill.img}?w=164&h=164&fit=crop&auto=format`}
-                                                    srcSet={`${skill.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                                                    alt={skill.name}
-                                                    loading='lazy'
-                                                />
-                                                <ImageListItemBar
-                                                    title={skill.name}
-                                                    align='center'
-                                                />
-                                            </ImageListItem>
-                                        ))}
-                                    </ImageList>
-                                </Card>
-                            </Stack>
-                        </Paper>
-                    </Box>
+                    <Typography variant='h2' align='center' sx={{ pt: '20px' }}>Skills</Typography>
+                    <Stack direction='row' justifyContent='space-around' alignItems='center' spacing={2} sx={{ my: 5 }}>
+                        <Card elevation={5} sx={{ maxWidth: '415px', p: 1 }}>
+                            <Typography variant='h4' align='center'>Front End</Typography>
+                            <ImageList sx={{ width: 385, height: 325 }} cols={3} rowHeight={125}>
+                                {skillsFront.map((skill) => (
+                                    <ImageListItem key={skill.name}>
+                                        <img
+                                            src={`${skill.img}?w=164&h=164&fit=crop&auto=format`}
+                                            srcSet={`${skill.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                                            alt={skill.name}
+                                            loading='lazy'
+                                        />
+                                        <ImageListItemBar
+                                            subtitle={skill.name}
+                                            align='center'
+                                        />
+                                    </ImageListItem>
+                                ))}
+                            </ImageList>
+                        </Card>
+                        <Card elevation={5} sx={{ maxWidth: '415px', p: 1 }}>
+                            <Typography variant='h4' align='center'>Back End</Typography>
+                            <ImageList sx={{ width: 385, height: 335 }} cols={3} rowHeight={125}>
+                                {skillsBack.map((skill) => (
+                                    <ImageListItem key={skill.name}>
+                                        <img
+                                            src={`${skill.img}?w=164&h=164&fit=crop&auto=format`}
+                                            srcSet={`${skill.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                                            alt={skill.name}
+                                            loading='lazy'
+                                        />
+                                        <ImageListItemBar
+                                            subtitle={skill.name}
+                                            align='center'
+                                        />
+                                    </ImageListItem>
+                                ))}
+                            </ImageList>
+                        </Card>
+                    
+                        <Card elevation={5} sx={{ maxWidth: '415px', p: 1 }}>
+                            <Typography variant='h4' align='center'>Tools</Typography>
+                            <ImageList sx={{ width: 385, height: 325 }} cols={3} rowHeight={125}>
+                                {tools.map((skill) => (
+                                    <ImageListItem key={skill.name}>
+                                        <img
+                                            src={`${skill.img}?w=164&h=164&fit=crop&auto=format`}
+                                            srcSet={`${skill.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                                            alt={skill.name}
+                                            loading='lazy'
+                                        />
+                                        <ImageListItemBar
+                                            subtitle={skill.name}
+                                            align='center'
+                                        />
+                                    </ImageListItem>
+                                ))}
+                            </ImageList>
+                        </Card>
+                    </Stack>
+                </Box>
             }
         </>
     )
