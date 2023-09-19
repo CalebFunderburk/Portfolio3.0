@@ -13,7 +13,7 @@ const Hero = () => {
                         <Typography variant='h1'>Welcome, I'm <Typography variant='h' color='#1976d2'>Caleb</Typography>.</Typography>
                         <Typography variant='h1'>I'm a full stack developer.</Typography>
                         <Link to='projects' spy={true} smooth={true} offset={-56} duration={500}>
-                            <Button variant='contained' size='large' sx={{ my: 3, mx: 1 }}>View my work</Button>
+                            <Button variant='contained' size='large' sx={{ my: 3, mx: 1 }}>My work</Button>
                         </Link>
                         <Link to='contact' spy={true} smooth={true} offset={-56} duration={500}>
                             <Button variant='contained' size='large' sx={{ my: 3, mx: 1 }}>Contact me</Button>
@@ -27,7 +27,7 @@ const Hero = () => {
                         <Typography variant='h3'>I'm a full stack developer.</Typography>
                         <Stack direction='row' justifyContent='center' alignItems='center' spacing={2}>
                             <Link to='projects' spy={true} smooth={true} offset={-56} duration={500}>
-                                <Button variant='contained' size='large' sx={{ my: 3 }}>View my work</Button>
+                                <Button variant='contained' size='large' sx={{ my: 3 }}>My work</Button>
                             </Link>
                             <Link to='contact' spy={true} smooth={true} offset={-56} duration={500}>
                                 <Button variant='contained' size='large' sx={{ my: 3}}>Contact me</Button>

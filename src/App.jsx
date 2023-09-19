@@ -10,7 +10,6 @@ function App() {
 
   const mobileViewport = useMediaQuery('(max-width:600px)')
 
-  // Need to work on Skills component a little more, specifically tablet view, its bleeding into Project component
   // Need to work on Header & Drawer, Drawer is bleeding on small view ports and Header needs to switch to mobile version sooner than current breakpoint but it's being weird for some reason
 
   return (
@@ -28,7 +27,7 @@ function App() {
         </>
         :
         <>
-          <Header />
+          <Header  />
           <Toolbar />
           <Container component='main' maxWidth={false} disableGutters>
             <Hero />

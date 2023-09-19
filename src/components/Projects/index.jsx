@@ -88,7 +88,7 @@ const Projects = () => {
                     <Typography variant='h2' align='center' py='2%'>My Work</Typography>
                     <Carousel responsive={responsive} infinite={true} centerMode={true}>
                         {projects.map((project) => (
-                            <Card elevation={4} sx={{ minHeight: '485px', mx: 2 }}>
+                            <Card key={project.name} elevation={4} sx={{ minHeight: '485px', mx: 2 }}>
                                 <CardMedia
                                     component='img'
                                     alt='screenshot'
@@ -121,7 +121,7 @@ const Projects = () => {
                             <Typography variant='h3' align='center' py='2%'>My Work</Typography>
                             <Carousel responsive={responsive} infinite={true} centerMode={true}>
                                 {projects.map((project) => (
-                                    <Card elevation={4} sx={{ minHeight: '350px', mx: 1 }}>
+                                    <Card key={project.name} elevation={4} sx={{ minHeight: '350px', mx: 1 }}>
                                         <CardMedia
                                             component='img'
                                             alt='screenshot'
@@ -191,7 +191,7 @@ const Projects = () => {
                         <Typography variant='h2' align='center' sx={{ pt: '20px' }}>My Work</Typography>
                         <Grid container justifyContent='center' rowGap={1} rowSpacing={1} columnSpacing={2} sx={{ p: 2 }}>
                             {projects.map((project) => (
-                                <Grid item xs={6}>
+                                <Grid item key={project.name} xs={6}>
                                     <Card elevation={9}>
                                         <CardMedia
                                             component='img'

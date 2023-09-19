@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 import { AppBar, Toolbar, IconButton, Stack, Box, Container, Typography, Button, Drawer, Divider, List, ListItem, Link as ExternalLink, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
 import { Menu, Close, LinkedIn, GitHub, YouTube, Home } from '@mui/icons-material'
 
-const Header = (props) => {
+const Header = () => {
 
     const [open, setOpen] = useState(false)
 
@@ -11,7 +11,7 @@ const Header = (props) => {
 
     const drawerWidth = 240
 
-    const { window } = props
+    const container = window.document.bod
 
     const close = () => {
         setOpen(!open)
@@ -64,7 +64,7 @@ const Header = (props) => {
             <Divider />
             <ListItem>
                 <Link to='projects' spy={true} smooth={true} offset={-56} duration={500}>
-                    <Button aria-label='Projects' color='inherit' onClick={close}>Projects</Button>
+                    <Button aria-label='My Work' color='inherit' onClick={close}>My Work</Button>
                 </Link>
             </ListItem>
             <Divider />
@@ -100,8 +100,6 @@ const Header = (props) => {
         </List>
     )
 
-    const container = window !== undefined ? () => window().document.body : undefined
-
     return (
         <>
             {!mobileViewport ?
@@ -119,7 +117,7 @@ const Header = (props) => {
                                     <Button aria-label='Skills' color='inherit'>Skills</Button>
                                 </Link>
                                 <Link to='projects' spy={true} smooth={true} offset={-64} duration={500}>
-                                    <Button aria-label='Projects' color='inherit'>My Work</Button>
+                                    <Button aria-label='My Work' color='inherit'>My Work</Button>
                                 </Link>
                                 <Link to='resume' spy={true} smooth={true} offset={-64} duration={500}>
                                     <Button aria-label='Resume' color='inherit'>Resume</Button>
