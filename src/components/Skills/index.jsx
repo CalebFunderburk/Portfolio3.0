@@ -34,81 +34,81 @@ const Skills = () => {
     const skillsFront = [
         {
             name: 'JavaScript',
-            img: 'src/assets/images/skills/js.png'
+            img: 'portfolio3.0/assets/images/skills/js.png'
         },
         {
             name: 'React',
-            img: 'src/assets/images/skills/react.png'
+            img: 'portfolio3.0/assets/images/skills/react.png'
         },
         {
             name: 'Vite',
-            img: 'src/assets/images/skills/vite.png'
+            img: 'portfolio3.0/assets/images/skills/vite.png'
         },
         {
             name: 'Material UI',
-            img: 'src/assets/images/skills/materialui.png'
+            img: 'portfolio3.0/assets/images/skills/materialui.png'
         },
         {
             name: 'HTML',
-            img: 'src/assets/images/skills/html.png'
+            img: 'portfolio3.0/assets/images/skills/html.png'
         },
         {
             name: 'CSS',
-            img: 'src/assets/images/skills/css.png'
+            img: 'portfolio3.0/assets/images/skills/css.png'
         }
     ]
 
     const skillsBack = [
         {
             name: 'Node',
-            img: 'src/assets/images/skills/node.png'
+            img: 'portfolio3.0/assets/images/skills/node.png'
         },
         {
             name: 'Express',
-            img: 'src/assets/images/skills/express.png'
+            img: 'portfolio3.0/assets/images/skills/express.png'
         },
         {
             name: 'MySQL',
-            img: 'src/assets/images/skills/mysql.png'
+            img: 'portfolio3.0/assets/images/skills/mysql.png'
         },
         {
             name: 'Sequelize',
-            img: 'src/assets/images/skills/sequelize.png'
+            img: 'portfolio3.0/assets/images/skills/sequelize.png'
         },
         {
             name: 'MongoDB',
-            img: 'src/assets/images/skills/mongodb.png'
+            img: 'portfolio3.0/assets/images/skills/mongodb.png'
         },
         {
             name: 'GraphQL',
-            img: 'src/assets/images/skills/graphql.png'
+            img: 'portfolio3.0/assets/images/skills/graphql.png'
         }
     ]
 
     const tools = [
         {
             name: 'Git',
-            img: 'src/assets/images/skills/git.png'
+            img: 'portfolio3.0/assets/images/skills/git.png'
         },
         {
             name: 'Heroku',
-            img: 'src/assets/images/skills/heroku.png'
+            img: 'portfolio3.0/assets/images/skills/heroku.png'
         },
         {
             name: 'Jest',
-            img: 'src/assets/images/skills/jest.png'
+            img: 'portfolio3.0/assets/images/skills/jest.png'
         },
         {
             name: 'Webpack',
-            img: 'src/assets/images/skills/webpack.png'
+            img: 'portfolio3.0/assets/images/skills/webpack.png'
         },
         {
             name: 'Insomnia',
-            img: 'src/assets/images/skills/insomnia.png'
+            img: 'portfolio3.0/assets/images/skills/insomnia.png'
         },
         {
             name: 'VS Code',
-            img: 'src/assets/images/skills/vscode.png'
+            img: 'portfolio3.0/assets/images/skills/vscode.png'
         }
     ]
 
