@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Typography, Box, Stack, Card, CardMedia, Button, Modal, Fade, Backdrop, useMediaQuery } from '@mui/material'
 import { Preview, Download, Close } from '@mui/icons-material'
+import resume from '../../assets/pdfs/resume.pdf'
 
 const Resume = () => {
 
@@ -40,7 +41,7 @@ const Resume = () => {
             <Fade in={open}>
                 <Card align='right' sx={modalStyle}>
                 <Button variant='contained' endIcon={<Close/>} onClick={handleClose} sx={{ mb: 3 }} >Close</Button>
-                    <CardMedia component='iframe' src='src\assets\pdfs\Full Stack Development Resume.pdf' alt='resume' height='95%' width='100%'/>
+                    <CardMedia component='iframe' src={resume} alt='resume' height='95%' width='100%'/>
                 </Card>
             </Fade>
         </Modal>
@@ -58,7 +59,7 @@ const Resume = () => {
                             <Button variant='contained' size='large' endIcon={<Preview/>} onClick={handleOpen}>View in Browser</Button>
                             {modal}
                             <Typography variant='h5'>or</Typography>
-                            <a download href='src\assets\pdfs\Full Stack Development Resume.pdf'><Button variant='contained' size='large' endIcon={<Download/>}>Download</Button></a>
+                            <a download href={resume}><Button variant='contained' size='large' endIcon={<Download/>}>Download</Button></a>
                         </Card>
                     </Stack>
                 </Box>
@@ -70,7 +71,7 @@ const Resume = () => {
                             <Button variant='contained' size='large' endIcon={<Preview/>} onClick={handleOpen}>View in Browser</Button>
                             {modal}
                             <Typography variant='h5'>or</Typography>
-                            <a download href='src\assets\pdfs\Full Stack Development Resume.pdf'><Button variant='contained' size='large' endIcon={<Download/>}>Download</Button></a>
+                            <a download href={resume}><Button variant='contained' size='large' endIcon={<Download/>}>Download</Button></a>
                         </Card>
                     </Stack>
                 </Box>

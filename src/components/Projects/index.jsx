@@ -3,6 +3,11 @@ import { Typography, Box, Grid, Stack, Card, Modal, Fade, Backdrop, CardMedia, C
 import { Close } from '@mui/icons-material'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+import chunkd from '../../assets/images/screenshots/chunkd-screenshot.png'
+import picme from '../../assets/images/screenshots/picme-screenshot.png'
+import techtalk from '../../assets/images/screenshots/techtalk-screenshot.png'
+import onthego from '../../assets/images/screenshots/onthego-screenshot.png'
+
 
 const Projects = () => {
 
@@ -22,7 +27,7 @@ const Projects = () => {
             title: "Chunk'd",
             link: 'https://chunkd-aj.herokuapp.com/signup',
             repo: 'https://github.com/PuppetAJ/ReactMC',
-            image: 'src/assets/images/screenshots/chunkd-screenshot.png',
+            image: chunkd,
             role: 'Backend Developer',
             desc: 'MERN stack Minecraft clone where users can create, save, & share their builds.',
             tech: 'React, Express, Node, MongoDB, GraphQL, ThreeJS, JWT, Tailwind, Heroku'
@@ -31,7 +36,7 @@ const Projects = () => {
             title: 'PicMe',
             link: 'https://picme1.herokuapp.com/',
             repo: 'https://github.com/CalebFunderburk/PicMe',
-            image: 'src/assets/images/screenshots/picme-screenshot.png',
+            image: picme,
             role: 'Lead Developer',
             desc: 'MVC social media application built for photographers.',
             tech: 'JavaScript, Node, Express, Handlebars, Sequelize, Bootstrap, Heroku'
@@ -40,7 +45,7 @@ const Projects = () => {
             title: 'Tech Talk',
             link: 'https://tech-talk-0.herokuapp.com/',
             repo: 'https://github.com/CalebFunderburk/Tech-Talk',
-            image: 'src/assets/images/screenshots/techtalk-screenshot.png',
+            image: techtalk,
             role: 'Lead Developer',
             desc: 'MVC forum application built for trends in technology.',
             tech: 'JavaScript, Node, Express, Handlebars, Sequelize, Bootstrap, Heroku'
@@ -49,7 +54,7 @@ const Projects = () => {
             title: 'On The Go',
             link: 'https://calebfunderburk.github.io/On-The-Go/',
             repo: 'https://github.com/CalebFunderburk/On-The-Go',
-            image: 'src/assets/images/screenshots/onthego-screenshot.png',
+            image: onthego,
             role: 'Lead Developer',
             desc: 'Open Weather API weather application.',
             tech: 'HTML, CSS, JQuery, MomentJS, Bulma'
@@ -100,7 +105,7 @@ const Projects = () => {
                                         <Typography variant='h5' component='div'>{project.title}</Typography>
                                         <Typography gutterBottom>{project.role}</Typography>
                                     </Stack>
-                                    <Typography variant='body2' gutterBottom>{project.desc}</Typography>
+                                    <Typography variant='body2' fontStyle='italic' gutterBottom>{project.desc}</Typography>
                                     <Typography>Built with:</Typography>
                                     <Typography variant='body2'>{project.tech}</Typography>
                                 </CardContent>
@@ -157,7 +162,7 @@ const Projects = () => {
                                                                 <Typography variant='h5' component='div'>{project.title}</Typography>
                                                                 <Typography gutterBottom>{project.role}</Typography>
                                                             </Stack>
-                                                            <Typography gutterBottom>{project.desc}</Typography>
+                                                            <Typography fontStyle='italic' gutterBottom>{project.desc}</Typography>
                                                             <Typography variant='h5' gutterBottom>Built with:</Typography>
                                                             <Typography>{project.tech}</Typography>
                                                         </CardContent>
@@ -204,7 +209,7 @@ const Projects = () => {
                                                 <Typography variant='h4' component='div'>{project.title}</Typography>
                                                 <Typography variant='h6' gutterBottom>{project.role}</Typography>
                                             </Stack>
-                                            <Typography variant='body2' gutterBottom>{project.desc}</Typography>
+                                            <Typography variant='body2' fontStyle='italic' gutterBottom>{project.desc}</Typography>
                                             <Typography>Built with:</Typography>
                                             <Typography variant='body2'>{project.tech}</Typography>
                                         </CardContent>

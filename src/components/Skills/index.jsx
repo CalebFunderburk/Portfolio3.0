@@ -1,6 +1,24 @@
 import { Typography, Box, Grid, Paper, Card, ImageList, ImageListItem, ImageListItemBar, Stack, CardContent, CardHeader, useMediaQuery } from '@mui/material'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+import javascript from '../../assets/images/skills/js.png'
+import react from '../../assets/images/skills/react.png'
+import vite from '../../assets/images/skills/vite.png'
+import materialui from '../../assets/images/skills/materialui.png'
+import html from '../../assets/images/skills/html.png'
+import css from '../../assets/images/skills/css.png'
+import node from '../../assets/images/skills/node.png'
+import express from '../../assets/images/skills/express.png'
+import mysql from '../../assets/images/skills/mysql.png'
+import sequelize from '../../assets/images/skills/sequelize.png'
+import mongodb from '../../assets/images/skills/mongodb.png'
+import graphql from '../../assets/images/skills/graphql.png'
+import git from '../../assets/images/skills/git.png'
+import heroku from '../../assets/images/skills/heroku.png'
+import jest from '../../assets/images/skills/jest.png'
+import webpack from '../../assets/images/skills/webpack.png'
+import insomnia from '../../assets/images/skills/insomnia.png'
+import vscode from '../../assets/images/skills/vscode.png'
 
 const Skills = () => {
 
@@ -34,81 +52,81 @@ const Skills = () => {
     const skillsFront = [
         {
             name: 'JavaScript',
-            img: '../assets/images/skills/js.png'
+            img: javascript
         },
         {
             name: 'React',
-            img: '../assets/images/skills/react.png'
+            img: react
         },
         {
             name: 'Vite',
-            img: '../assets/images/skills/vite.png'
+            img: vite
         },
         {
             name: 'Material UI',
-            img: '../assets/images/skills/materialui.png'
+            img: materialui
         },
         {
             name: 'HTML',
-            img: '../assets/images/skills/html.png'
+            img: html
         },
         {
             name: 'CSS',
-            img: '../assets/images/skills/css.png'
+            img: css
         }
     ]
 
     const skillsBack = [
         {
             name: 'Node',
-            img: '../assets/images/skills/node.png'
+            img: node
         },
         {
             name: 'Express',
-            img: '../assets/images/skills/express.png'
+            img: express
         },
         {
             name: 'MySQL',
-            img: '../assets/images/skills/mysql.png'
+            img: mysql
         },
         {
             name: 'Sequelize',
-            img: '../assets/images/skills/sequelize.png'
+            img: sequelize
         },
         {
             name: 'MongoDB',
-            img: '../assets/images/skills/mongodb.png'
+            img: mongodb
         },
         {
             name: 'GraphQL',
-            img: '../assets/images/skills/graphql.png'
+            img: graphql
         }
     ]
 
     const tools = [
         {
             name: 'Git',
-            img: '../assets/images/skills/git.png'
+            img: git
         },
         {
             name: 'Heroku',
-            img: '../assets/images/skills/heroku.png'
+            img: heroku
         },
         {
             name: 'Jest',
-            img: '../assets/images/skills/jest.png'
+            img: jest
         },
         {
             name: 'Webpack',
-            img: '../assets/images/skills/webpack.png'
+            img: webpack
         },
         {
             name: 'Insomnia',
-            img: '../assets/images/skills/insomnia.png'
+            img: insomnia
         },
         {
             name: 'VS Code',
-            img: '../assets/images/skills/vscode.png'
+            img: vscode
         }
     ]
 
