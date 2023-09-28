@@ -1,4 +1,4 @@
-import { Typography, Box, Grid, Paper, Card, ImageList, ImageListItem, ImageListItemBar, Stack, CardContent, CardHeader, useMediaQuery } from '@mui/material'
+import { Typography, Box, Card, ImageList, ImageListItem, ImageListItemBar, Stack, useMediaQuery } from '@mui/material'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import javascript from '../../assets/images/skills/js.png'

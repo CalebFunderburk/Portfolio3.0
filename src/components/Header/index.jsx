@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
-import { AppBar, Toolbar, IconButton, Stack, Box, Container, Typography, Button, Drawer, Divider, List, ListItem, Link as ExternalLink, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
+import { AppBar, Toolbar, IconButton, Stack, Box, Container, Typography, Button, Drawer, Divider, List, ListItem, Link as ExternalLink, useMediaQuery } from '@mui/material'
 import { Menu, Close, LinkedIn, GitHub, YouTube, Home } from '@mui/icons-material'
 
 const Header = () => {
