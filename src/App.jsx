@@ -10,7 +10,9 @@ function App() {
 
   const mobileViewport = useMediaQuery('(max-width:600px)')
 
-  // Need to work on Header & Drawer, Drawer is bleeding on small view ports and Header needs to switch to mobile version sooner than current breakpoint but it's being weird for some reason
+  // 3 png's in Skills Component aren't working
+  // In mobile version, modals in Projects component are only displaying content for PicMe, the close buttons in this modal should be like the one from Resume
+  // Modal for Resume on mobile version could use some resizing
 
   return (
     <>
