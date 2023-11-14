@@ -36,7 +36,7 @@ This program can be run through a browser using the above link to the deployed a
 
 * Clone this repository to receive all the files.
 
-## Screenshot
+## Screenshots
 
 ### Desktop
 ![Screenshot of website](./src/assets/images/screenshots/screenshot.png)
@@ -44,6 +44,6 @@ This program can be run through a browser using the above link to the deployed a
 ### Mobile
 ![Screenshot of website](./src/assets/images/screenshots/screenshot2.png)
 
-### Contributions
+## Contributions
 
 - Caleb Funderburk
